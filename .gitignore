@@ -11,3 +11,8 @@ rsconnect
 myenv
 .env
 index_files
+.bash_history
+.cache
+.config
+.local
+.sh_history 
