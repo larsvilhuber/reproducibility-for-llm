@@ -72,7 +72,7 @@ jobs:
     #     path: ./presentation
       run: |
         cd presentation
-        quarto render index.Rmd
+        quarto render index.qmd
     - name: Upload Artifact
       id: artifact-upload-step2
       uses: actions/upload-artifact@v4
