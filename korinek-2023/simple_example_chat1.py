@@ -15,13 +15,15 @@ OVERVIEW OF CODE:
 """
 
 import openai
+import os
 
 # Set parameters
 
-openai.api_key = "your_api_key_here" # change this to set API key for access to OpenAI API
+openai.api_key = os.environ.get('OPENAI_API_KEY')
 
-if openai.api_key == "your_api_key_here":
-    openai.api_key = input("Please enter your OpenAI API key: ")
+# If the API key isn't found in the environment variable, prompt the user for it
+if not openai.api_key:
+    openai.api_key = input("Please enter your OPENAI API key: ")
 
 prompt = "Can you brainstorm 20 channels through which AI may increase inequality? Limit your response to 10 words for each point."
 model = "gpt-4-0613"
