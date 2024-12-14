@@ -20,7 +20,7 @@ latex:
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
 #  - packages.bib
-  - paper.bib
+  - presentation/paper.bib
 
 # Information about where the book exists on the web
 repository:

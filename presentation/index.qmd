@@ -1,0 +1,69 @@
+---
+title: "Reproducibility in an AI World"
+author: 
+  - "Lars Vilhuber"
+date: Dec 14 2024
+bibliography: "paper.bib"
+
+
+---
+
+```{r, child=c('00-preamble.md')}
+```
+
+```{r, child=c('00-index-mod.md')}
+```
+
+```{r, child=c('00-targets.md')}	
+```
+
+```{r, child=c('00-intermezzo-ai.md')}	
+```
+
+```{r, child=c('03-an-example.md')}	
+```
+
+# Why
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Unpredictable things happening to your computing environment:
+
+- Software updates
+- Change of employer
+- Sudden need for a new computer
+
+:::
+
+::: {.column width="50%"}
+
+![](https://media1.tenor.com/m/1L7rJphSMxQAAAAC/fail-fall.gif)
+
+:::
+
+::::
+
+# Questions
+
+#
+
+![](images/HAL-static.png)
+
+
+## This presentation
+
+- [Github](https://github.com/larsvilhuber/reproducibility-for-llm)
+- [Presentation](https://larsvilhuber.github.io/reproducibility-for-llm/presentation/)
+
+
+Content is [![License: CC BY-NC 4.0](images/cc-by-nc-80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/).
+
+# Appendix
+
+```{r, child=c('99-full-intermezzo-ai.md')}	
+```
+
+
+# References

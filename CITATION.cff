@@ -21,6 +21,6 @@ repository-code: >-
 url: >-
   https://larsvilhuber.github.io/reproducibility-for-llm/
 abstract: >-
-  This talk will explore how AI, while offering great potential for enhancing research, introduces challenges that parallel the historical difficulties researchers have faced when using black-box systems, commercial software, or external APIs. By examining AI’s role in reshaping traditional research workflows, we will discuss issues such as algorithmic transparency, data dependencies, and the difficulty of archiving machine learning models and outputs. The talk will highlight key strategies for ensuring reproducibility in AI-driven research and propose pathways for researchers to navigate this evolving landscape.
+  This talk will explore how AI, while offering great potential for enhancing research, introduces challenges that parallel the historical difficulties researchers have faced when using black-box systems, commercial software, or external APIs. By examining AI's role in reshaping traditional research workflows, we will discuss issues such as algorithmic transparency, data dependencies, and the difficulty of archiving machine learning models and outputs. The talk will highlight key strategies for ensuring reproducibility in AI-driven research and propose pathways for researchers to navigate this evolving landscape.
 license: CC-BY-NC-4.0
 date-released: '2024-12-14'
