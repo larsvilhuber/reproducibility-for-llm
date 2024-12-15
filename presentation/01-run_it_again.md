@@ -1,10 +1,14 @@
 # Run it all again
 
-The very first test is that your code must run, beginning to end, top to bottom, without error, and ideally without any user intervention. This should in principle (re)create all figures, tables, and numbers you include in your paper. 
+The very first test is that your code must run, **beginning to end,** top to bottom, without error, and ideally without any user intervention. This should in principle (re)create all figures, tables, and numbers you include in your paper. 
 
 ## TL;DR
 
-This is pretty much the most basic test of reproducibility. If you cannot run your code, you cannot reproduce your results, nor can anybody else. So just re-run the code.
+This is pretty much the most basic test of reproducibility. 
+
+> This has nothing to do with LLM/AI!
+
+If you cannot run your code, you cannot reproduce your results, nor can anybody else. So just re-run the code.
 
 ## Exceptions
 

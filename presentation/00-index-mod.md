@@ -3,7 +3,7 @@
 
 AI introduces **challenges for reproducibility**.
 
--- 
+---
 
 Not unlike **difficulties** researchers face with
 
@@ -11,7 +11,7 @@ Not unlike **difficulties** researchers face with
 - existing commercial software
 - external APIs of any kind
 
--- 
+---
 
 I will discuss 
 
@@ -28,7 +28,7 @@ In this talk, we focus on **computational reproducibility**, though the ultimate
 I will distinguish **LLM** (large language models) from **AI** (artificial intelligence):
 
 - LLM: models that are trained for a specific (possibly broad) purpose
-- AI: online systems that use LLMs, such as GPT, Claude, etc.
+- AI: **online** systems that use LLMs, such as GPT, Claude, etc.
 
 ## My background
 

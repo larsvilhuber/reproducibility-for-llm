@@ -11,3 +11,13 @@ We want to check that
 
 :::
 
+## Tools and Standards
+
+In Economics, 
+
+- Use the [Template README](https://social-science-data-editors.github.io/template_README/)
+- Describe data provenance and access conditions for all **raw data**
+- Describe all data transformations starting with **raw data**
+- Provide **all code**, including for data you cannot share
+
+## But first...

@@ -1,11 +1,5 @@
 # Hands-off running: Creating a controller script
 
-Did it take you a long time to run everything again?
-
-![⏳](https://c.tenor.com/4qs0klfg8nMAAAAC/tenor.gif)
-
-## Let's ramp it up a bit. 
-
 - Your code must run, **beginning to end**, top to bottom, without error, and **without any user intervention**. 
 
 - This should in principle (re)create all **figures**, **tables**, and **in-text numbers** you include in your paper. 
@@ -29,98 +23,14 @@ We have seen users who appear to highlight code and to run it interactively, in 
 
 ## Creating a main or master script
 
-In order to be able to enable "hands-off running", the **main (controller) script is key**. I will show here a few simple examples for single-software replication packages. We will discuss more complex examples in one of the next chapters.
+In order to be able to enable "hands-off running", the **main (controller) script is key**. 
 
-## Examples
+## Example 1: Querying Claude.ai
 
+- for the first example, I was **lazy** - I typed the prompt into the Claude.ai website.
+- Can you repeat it?
+- What if I have to repeat it 100 times, with slight variations?
 
-## Stata {auto-animate=true}
-
-::::{.columns}
-
-:::{.column width=40%}
-
-Set the root directory (dynamically)
-
-:::
-
-:::{.column width=60%}
-
-```{.stata code-line-numbers="1-2"}
-* main.do
-global rootdir : pwd
-* Run the data preparation file
-do $rootdir/01_data_prep.do
-* Run the analysis file
-do $rootdir/02_analysis.do
-* Run the table file
-do $rootdir/03_tables.do
-* Run the figure file
-do $rootdir/04_figures.do
-* Run the appendix file
-do $rootdir/05_appendix.do
-```
-
-:::
-::::
-
-## Stata {auto-animate=true}
-
-::::{.columns}
-
-:::{.column width=40%}
-
-Call the various files that consitute your complete analysis.
-
-:::
-
-:::{.column width=60%}
-
-```{.stata code-line-numbers="4,6,8,10,12"}
-* main.do
-global rootdir : pwd
-* Run the data preparation file
-do $rootdir/01_data_prep.do
-* Run the analysis file
-do $rootdir/02_analysis.do
-* Run the table file
-do $rootdir/03_tables.do
-* Run the figure file
-do $rootdir/04_figures.do
-* Run the appendix file
-do $rootdir/05_appendix.do
-```
-
-:::
-::::
-
-
-## Notes
-
-- The use of `do` (instead of `run` or even `capture run`) is best, as it will show the code that is being run, and is thus more transparent to you and the future replicator.
-
-## Notes
-
-- Run this using the [right-click method](https://labordynamicsinstitute.github.io/ldilab-manual/96-02-running-stata-code.html#step-6-run-the-code) (Windows) or from the terminal (macOS, Linux): 
-
-:::: {.columns}
-
-::: {.column width=60%}
-
-![](images/execute-do-cropped.png)
-
-:::
-
-::: {.column width=40%}
-
-```bash
-cd /where/my/code/is
-stata-mp -b do main.do
-```
-where `stata-mp` should be replaced with `stata` or `stata-se` depending on your licensed version.
-
-:::
-::::
 
 
 ## R {auto-animate=true}
@@ -203,20 +113,36 @@ source(file.path(rootdir, "05_appendix.R"), echo = TRUE)
 
 The use of `echo=TRUE` is best, as it will show the code that is being run, and is thus more transparent to you and the future replicator.
 
-## Notes for R {auto-animate=true}
+## Notes for Python {auto-animate=true}
 
-Even if you are using Rstudio, run this using the [terminal method](https://labordynamicsinstitute.github.io/ldilab-manual/96-12-running-r-code.html) in Rstudio for any platform, or from the terminal (macOS, Linux): 
+- There are many ways to do this in Python (as there are more in R)
+- Defining **functions** separately, and then calling them in the **main** file.
+- Constructing a **package** and calling that package.
+
+## Notes for Python {auto-animate=true}
+
+If using **procedural** Python code, might use a `bash` script:
 
 ```bash
-cd /where/my/code/is
-R CMD BATCH main.R
+# This is main.sh
+python 01_data_prep.py
+python 02_analysis.py
+python 03_tables.py
+python 04_figures.py
 ```
 
-Do not use `Rscript`, as it will not generate enough output! 
+## Caution
 
-## Other examples
+What you do should remain **transparent** to other users!
 
-For examples for **Julia, Python, MATLAB,** and **multi-software scripts**, see the [full text](https://larsvilhuber.github.io/self-checking-reproducibility/02-hands_off_running.html).
+## Caution
+
+Writing a scientific paper is different than writing a useful function on the internet.
+
+> You are not writing `mynumpy`, you are writing a paper.
+
+*... though there are grey areas there.*
+
 
 ## Takeaways {.smaller}
 
