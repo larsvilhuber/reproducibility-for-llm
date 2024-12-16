@@ -4,9 +4,9 @@ author:
   - "Lars Vilhuber"
 date: Dec 14 2024
 bibliography: "paper.bib"
-
-
 ---
+
+*A PDF version of this presentation is available [here](presentation.pdf).*
 
 ```{r, child=c('00-preamble.md')}
 ```
@@ -14,14 +14,39 @@ bibliography: "paper.bib"
 ```{r, child=c('00-index-mod.md')}
 ```
 
-```{r, child=c('00-targets.md')}	
-```
-
 ```{r, child=c('00-intermezzo-ai.md')}	
 ```
 
-```{r, child=c('03-an-example.md')}	
+```{r, child=c('00-targets.md')}	
 ```
+
+```{r, child=c('10-data-provenance.md')}
+```
+
+```{r, child=c('31-run_it_again.md')}	
+```
+
+```{r, child=c('32-00-intermezzo.md')}	
+```
+
+```{r, child=c('32-hands_off_running.md')}	
+```
+
+```{r, child=c('33-an-example.md')}	
+```
+
+```{r, child=c('34-00-intermezzo.md')}
+```
+
+```{r, child=c('34-creating_log_files.md')}
+```
+
+```{r, child=c('35-00-intermezzo.md')}
+```
+
+```{r, child=c('35-environments-python.md')}
+```
+
 
 # Why
 

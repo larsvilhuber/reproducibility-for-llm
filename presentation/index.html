@@ -226,18 +226,26 @@ Lars Vilhuber
 
   <p class="date">2024-12-14</p>
 </section>
+<section class="slide level2 center">
+
+<p><em>A PDF version of this presentation is available <a href="presentation.pdf">here</a>.</em></p>
+</section>
 <section>
 <section id="introduction" class="title-slide slide level1 center">
 <h1>Introduction</h1>
 <p>AI introduces <strong>challenges for reproducibility</strong>.</p>
-<p>–</p>
+</section>
+<section class="slide level2 center">
+
 <p>Not unlike <strong>difficulties</strong> researchers face with</p>
 <ul>
 <li>any black-box systems</li>
 <li>existing commercial software</li>
 <li>external APIs of any kind</li>
 </ul>
-<p>–</p>
+</section>
+<section class="slide level2 center">
+
 <p>I will discuss</p>
 <ul>
 <li>algorithmic transparency</li>
@@ -254,7 +262,7 @@ Lars Vilhuber
 <p>I will distinguish <strong>LLM</strong> (large language models) from <strong>AI</strong> (artificial intelligence):</p>
 <ul>
 <li>LLM: models that are trained for a specific (possibly broad) purpose</li>
-<li>AI: online systems that use LLMs, such as GPT, Claude, etc.</li>
+<li>AI: <strong>online</strong> systems that use LLMs, such as GPT, Claude, etc.</li>
 </ul>
 </section>
 <section id="my-background" class="slide level2 center">
@@ -269,20 +277,8 @@ Lars Vilhuber
 <h2>Reproducibility may be hard but important</h2>
 
 <img data-src="images/star-trek-beam.gif" class="r-stretch"></section></section>
-<section id="targets" class="title-slide slide level1 smaller center">
-<h1>Targets</h1>
-<p>We want to check that</p>
-<div>
-<ul class="task-list">
-<li class="fragment"><label><input type="checkbox">the materials can be accessed by others within a reasonable timeframe</label></li>
-<li class="fragment"><label><input type="checkbox">whether the materials can be preserved is made clear</label></li>
-<li class="fragment"><label><input type="checkbox">the extent to which re-running the same code yields the same results</label></li>
-</ul>
-</div>
-</section>
-
 <section>
-<section id="what-does-claude-say-edited" class="title-slide slide level1 smaller center">
+<section id="what-does-claude-say-edited" class="title-slide slide level1 center">
 <h1>What does Claude say (edited)?</h1>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -292,8 +288,9 @@ Lars Vilhuber
 </section>
 <section id="response" class="slide level2 center">
 <h2>Response</h2>
-<p><img data-src="images/claude-prompt1-20241214.png" alt="Claude’s response"><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></p>
-<aside></aside></section>
+<p><img data-src="images/claude-prompt1-20241214.png" alt="Claude’s response">[^claude1]</p>
+<p>See <a href="index.html#/what-did-claude-say">full response</a> as well as <a href="index.html#/what-did-openai-say">OpenAI’s response</a> [^claude1]: claude.ai, Haiku, Normal, 2024-12-14 20:47</p>
+</section>
 <section id="response-edited" class="slide level2 smaller center">
 <h2>Response (edited)</h2>
 <pre><code>A presentation on the reproducibility of AI-based research should comprehensively address several critical aspects:
@@ -308,6 +305,393 @@ Lars Vilhuber
 8. Reporting Challenges
 
 By comprehensively addressing these areas, the presentation can provide a robust framework for understanding and potentially replicating AI-based research, ultimately contributing to the scientific integrity and advancement of the field.</code></pre>
+</section>
+<section id="comparison" class="slide level2 smaller center scrollable">
+<h2>Comparison</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Claude:</p>
+<ol type="1">
+<li>Methodology Transparency</li>
+<li>Computational Environment</li>
+<li>Data Considerations</li>
+<li>Experimental Reproducibility</li>
+<li>Code and Implementation</li>
+<li>Ethical and Contextual Considerations</li>
+<li>Validation Strategies</li>
+<li>Reporting Challenges</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<p>OpenAI:</p>
+<ol type="1">
+<li>Introduction to Reproducibility</li>
+<li>Challenges in Reproducibility</li>
+<li>Data Accessibility</li>
+<li>Algorithm and Model Transparency</li>
+<li>Documentation and Reporting Standards</li>
+<li>Tools and Platforms for Reproducibility</li>
+<li>Case Studies and Examples</li>
+<li>Community and Collaboration</li>
+<li>Ethical and Legal Considerations</li>
+<li>Future Directions and Recommendations</li>
+</ol>
+</div></div>
+</section></section>
+<section>
+<section id="targets" class="title-slide slide level1 smaller center">
+<h1>Targets</h1>
+<p>We want to check that</p>
+<div>
+<ul class="task-list">
+<li class="fragment"><label><input type="checkbox">the materials can be accessed by others within a reasonable timeframe</label></li>
+<li class="fragment"><label><input type="checkbox">whether the materials can be preserved is made clear</label></li>
+<li class="fragment"><label><input type="checkbox">the extent to which re-running the same code yields the same results</label></li>
+</ul>
+</div>
+</section>
+<section id="tools-and-standards" class="slide level2 center">
+<h2>Tools and Standards</h2>
+<p>In Economics,</p>
+<ul>
+<li>Use the <a href="https://social-science-data-editors.github.io/template_README/">Template README</a></li>
+<li>Describe data provenance and access conditions for all <strong>raw data</strong></li>
+<li>Describe all data transformations starting with <strong>raw data</strong></li>
+<li>Provide <strong>all code</strong>, including for data you cannot share</li>
+</ul>
+</section>
+<section id="but-first" class="slide level2 center">
+<h2>But first…</h2>
+</section></section>
+<section>
+<section id="lets-talk-about-data" class="title-slide slide level1 center">
+<h1>Let’s talk about data</h1>
+
+</section>
+<section id="types-of-data" class="slide level2 center">
+<h2>Types of Data</h2>
+<ul>
+<li>Data used for training</li>
+<li>Data used for analysis</li>
+<li>Data output by the algorithm</li>
+</ul>
+</section>
+<section id="questions-for-data" class="slide level2 smaller center" data-auto-animate="true" data-transition="fade">
+<h2 data-id="quarto-animate-title">Questions for Data</h2>
+<div>
+<ul>
+<li class="fragment">Where did the (training/analysis) data come from?
+<ul>
+<li class="fragment">Can you share it?</li>
+<li class="fragment">Can others obtain access?</li>
+<li class="fragment">Is it still there?</li>
+</ul></li>
+<li class="fragment">Where did you put the analysis data?
+<ul>
+<li class="fragment">Can you share it?</li>
+<li class="fragment">If not, why not?</li>
+<li class="fragment">Can you preserve it?</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="data-provenance" class="slide level2 center">
+<h2>Data Provenance</h2>
+<blockquote>
+<p>Are <strong>models</strong> data or software? - will treat as <strong>software</strong> here.</p>
+</blockquote>
+</section>
+<section id="data-provenance-1" class="slide level2 center">
+<h2>Data Provenance</h2>
+<ul>
+<li>Are the source data <strong>preserved</strong>?
+<ul>
+<li>Often large <strong>text</strong> archives</li>
+<li>Format relevant: physical or electronic copy?</li>
+</ul></li>
+</ul>
+</section>
+<section id="good-example" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Good example</h2>
+<p>“Immigration Restrictions as Active Labor Market Policy: Evidence from the Mexican Bracero Exclusion, Replication files and raw data” (Michael Clemens)</p>
+<ul>
+<li>Hosted on <strong>Harvard Dataverse</strong> at <a href="https://dataverse.harvard.edu/dataverse/bracero" class="uri">https://dataverse.harvard.edu/dataverse/bracero</a></li>
+<li>Contains two datasets:
+<ul>
+<li>Clemens, Michael, 2017, “<strong>Raw scanned PDFs of primary sources for workers, wages, and crops</strong>”, <a href="https://doi.org/10.7910/DVN/DJHVHB" class="uri">https://doi.org/10.7910/DVN/DJHVHB</a>, Harvard Dataverse, V1</li>
+</ul></li>
+</ul>
+</section>
+<section id="your-analysis-data" class="slide level2 center">
+<h2>Your analysis data</h2>
+<p>Probably requires</p>
+<ul>
+<li>substantial computing resources (time, cost, space)</li>
+<li>lesser storage resources</li>
+</ul>
+</section>
+<section id="good-example-1" class="slide level2 smaller center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Good example</h2>
+<blockquote>
+<p>“Immigration Restrictions as Active Labor Market Policy: Evidence from the Mexican Bracero Exclusion, Replication files and raw data” (Michael Clemens)</p>
+</blockquote>
+<ul>
+<li>Hosted on <strong>Harvard Dataverse</strong> at <a href="https://dataverse.harvard.edu/dataverse/bracero" class="uri">https://dataverse.harvard.edu/dataverse/bracero</a></li>
+<li>Contains two datasets:
+<ul>
+<li>Clemens, Michael, 2018, “Replication Data for: Immigration Restrictions as Active Labor Market Policy: Evidence from the Mexican Bracero Exclusion”, <a href="https://doi.org/10.7910/DVN/17M4ZP" class="uri">https://doi.org/10.7910/DVN/17M4ZP</a>, Harvard Dataverse, V1</li>
+</ul></li>
+</ul>
+</section>
+<section id="llm-specific-considerations" class="slide level2 center">
+<h2>LLM-specific considerations</h2>
+<p>Generically,</p>
+<p><code>pre-trained LLM</code> ▶️ <code>tuned LLM</code> ▶️ <code>analysis data</code></p>
+</section>
+<section id="llm-specific-considerations-1" class="slide level2 center">
+<h2>LLM-specific considerations</h2>
+<ul>
+<li><code>tuned LLM</code> = f(<code>raw data</code>,<code>pre-trained LLM</code>)</li>
+<li><code>analysis data</code> = f(<code>tuned LLM</code>,<code>raw data</code>)</li>
+</ul>
+<p><strong>Both should be preserved</strong></p>
+</section>
+<section id="llm-specific-considerations-2" class="slide level2 center">
+<h2>LLM-specific considerations</h2>
+<ul>
+<li>size?</li>
+<li>where?</li>
+</ul>
+</section>
+<section id="llm-specific-considerations-3" class="slide level2 center">
+<h2>LLM-specific considerations</h2>
+<p><code>tuned LLM</code>:</p>
+<ul>
+<li>can you release it? (privacy)</li>
+<li>does <strong>Hugging Face</strong> have a preservation policy? (<em>no</em>)</li>
+<li>license to apply to it?</li>
+</ul>
+</section>
+<section id="llm-specific-considerations-4" class="slide level2 center">
+<h2>LLM-specific considerations</h2>
+<p><code>analysis data</code>:</p>
+<ul>
+<li>can be preserved as part of the replication package</li>
+<li>could be preserved elsewhere, if multi-purpose</li>
+</ul>
+</section></section>
+<section>
+<section id="run-it-all-again" class="title-slide slide level1 center">
+<h1>Run it all again</h1>
+<p>The very first test is that your code must run, <strong>beginning to end,</strong> top to bottom, without error, and ideally without any user intervention. This should in principle (re)create all figures, tables, and numbers you include in your paper.</p>
+</section>
+<section id="tldr" class="slide level2 center">
+<h2>TL;DR</h2>
+<p>This is pretty much the most basic test of reproducibility.</p>
+<blockquote>
+<p>This has nothing to do with LLM/AI!</p>
+</blockquote>
+<p>If you cannot run your code, you cannot reproduce your results, nor can anybody else. So just re-run the code.</p>
+</section>
+<section id="exceptions" class="slide level2 center">
+<h2>Exceptions</h2>
+</section>
+<section id="code-runs-for-a-very-long-time" class="slide level2 center">
+<h2>Code runs for a very long time</h2>
+<p>What happens when some of these re-runs are very long? See later in this chapter for how to handle this.</p>
+</section>
+<section id="making-the-code-run-takes-you-a-very-long-time" class="slide level2 center">
+<h2>Making the code run takes YOU a very long time</h2>
+<p>While the code, once set to run, can do so on its own, <em>you</em> might need to spend a lot of time getting all the various pieces to run.</p>
+</section>
+<section class="slide level2 center">
+
+<p><img data-src="images/Red-Warning-PNG-Clipart.png" class="center" width="350" height="300"></p>
+<p><em>This should be a warning sign:</em></p>
+<p>If it takes you a long time to get it to run, or to manually reproduce the results, it <strong>might take others even longer</strong>.<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></p>
+<aside></aside></section>
+<section class="slide level2 center">
+
+<p>Furthermore, it may suggest that you <strong>haven’t been able to re-run</strong> your own code very often, which can be indicate <strong>fragility</strong> or even <strong>lack of reproducibility</strong>.</p>
+</section>
+<section id="takeaways" class="slide level2 smaller center">
+<h2>Takeaways</h2>
+<div>
+<ul class="task-list">
+<li class="fragment"><label><input type="checkbox" checked="">your code runs without problem, after all the debugging.</label></li>
+<li class="fragment"><label><input type="checkbox">your code runs without manual intervention, and with low effort</label></li>
+<li class="fragment"><label><input type="checkbox">it actually produces all the outputs</label></li>
+<li class="fragment"><label><input type="checkbox">your code generates a log file that you can inspect, and that you could share with others.</label></li>
+<li class="fragment"><label><input type="checkbox">it will run on somebody else’s computer</label></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="why-is-this-not-enough" class="title-slide slide level1 center">
+<h1>Why is this not enough?</h1>
+
+</section>
+<section id="does-your-code-run-without-manual-intervention" class="slide level2 center">
+<h2>Does your code run without manual intervention?</h2>
+<p>Automation and robustness checks, as well as efficiency.</p>
+</section>
+<section id="can-you-provide-evidence-that-you-ran-it" class="slide level2 center">
+<h2>Can you provide evidence that you ran it?</h2>
+<p>Generating a log file means that you can inspect it, and you can share it with others. Also helps in debugging, for you and others.</p>
+</section>
+<section id="will-it-run-on-somebody-elses-computer" class="slide level2 smaller center">
+<h2>Will it run on somebody else’s computer?</h2>
+<p>Running it again does not help:</p>
+<div>
+<ul>
+<li class="fragment">because it does not guarantee that somebody else has all the software (including packages!)</li>
+<li class="fragment">because it does not guarantee that all the directories for input or output are there</li>
+<li class="fragment">because many intermediate files might be present that are not in the replication package</li>
+<li class="fragment">because you might have run things out of sequence, or relied on previously generated files in ways that won’t work for others</li>
+<li class="fragment">because some outputs might be present from test runs, but actually fail in this run</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="hands-off-running-creating-a-controller-script" class="title-slide slide level1 center">
+<h1>Hands-off running: Creating a controller script</h1>
+<ul>
+<li><p>Your code must run, <strong>beginning to end</strong>, top to bottom, without error, and <strong>without any user intervention</strong>.</p></li>
+<li><p>This should in principle (re)create all <strong>figures</strong>, <strong>tables</strong>, and <strong>in-text numbers</strong> you include in your paper.</p></li>
+</ul>
+<aside class="notes">
+<p>We have seen users who appear to highlight code and to run it interactively, in pieces, using the program file as a kind of notepad. This is not reproducible, and should be avoided. It is fine for debugging.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="seem-trivial" class="slide level2 center">
+<h2>Seem trivial?</h2>
+<blockquote>
+<p>Out of <strong>8280</strong> replication packages in ~20 top econ journals, only <strong>2594</strong> (<strong>31.33%</strong>) had a main/controller script.<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p>
+</blockquote>
+<aside></aside></section>
+<section id="tldr-1" class="slide level2 center">
+<h2>TL;DR</h2>
+<ul>
+<li>Create a “main” file that runs all the other files in the correct order.</li>
+<li>Run this file, without user intervention.</li>
+<li>It should run without error.</li>
+</ul>
+</section>
+<section id="creating-a-main-or-master-script" class="slide level2 center">
+<h2>Creating a main or master script</h2>
+<p>In order to be able to enable “hands-off running”, the <strong>main (controller) script is key</strong>.</p>
+</section>
+<section id="example-1-querying-claude.ai" class="slide level2 center">
+<h2>Example 1: Querying Claude.ai</h2>
+<ul>
+<li>for the first example, I was <strong>lazy</strong> - I typed the prompt into the Claude.ai website.</li>
+<li>Can you repeat it?</li>
+<li>What if I have to repeat it 100 times, with slight variations?</li>
+</ul>
+</section>
+<section id="r" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">R</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Set the root directory (using <code>here()</code> or <code>rprojroot()</code>).</p>
+</div><div class="column" style="width:60%;">
+<div class="sourceCode" id="cb3" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href=""></a><span class="co"># main.R</span></span>
+<span id="cb3-2" class="hljs-ln-code"><a href=""></a><span class="do">## Set the root directory</span></span>
+<span id="cb3-3" class="hljs-ln-code"><a href=""></a><span class="co"># If you are using Rproj files or git</span></span>
+<span id="cb3-4" class="hljs-ln-code"><a href=""></a>rootdir <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>()</span>
+<span id="cb3-5" class="hljs-ln-code"><a href=""></a><span class="co"># or if not</span></span>
+<span id="cb3-6" class="hljs-ln-code"><a href=""></a><span class="co"># rootdir &lt;- getwd()</span></span>
+<span id="cb3-7" class="hljs-ln-code"><a href=""></a><span class="do">## Run the data preparation file</span></span>
+<span id="cb3-8" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"01_data_prep.R"</span>), </span>
+<span id="cb3-9" class="hljs-ln-code"><a href=""></a>       <span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-10" class="hljs-ln-code"><a href=""></a><span class="do">## Run the analysis file</span></span>
+<span id="cb3-11" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"02_analysis.R"</span>), </span>
+<span id="cb3-12" class="hljs-ln-code"><a href=""></a>       <span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-13" class="hljs-ln-code"><a href=""></a><span class="do">## Run the table file</span></span>
+<span id="cb3-14" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"03_tables.R"</span>), <span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-15" class="hljs-ln-code"><a href=""></a><span class="do">## Run the figure file</span></span>
+<span id="cb3-16" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"04_figures.R"</span>), <span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-17" class="hljs-ln-code"><a href=""></a><span class="do">## Run the appendix file</span></span>
+<span id="cb3-18" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"05_appendix.R"</span>), <span class="at">echo =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="r-1" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">R</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Call each of the component programs, using <code>source()</code>.</p>
+</div><div class="column" style="width:60%;">
+<div class="sourceCode" id="cb4" data-code-line-numbers="8-9|11-12|14|16|18"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a href=""></a><span class="co"># main.R</span></span>
+<span id="cb4-2" class="hljs-ln-code"><a href=""></a><span class="do">## Set the root directory</span></span>
+<span id="cb4-3" class="hljs-ln-code"><a href=""></a><span class="co"># If you are using Rproj files or git</span></span>
+<span id="cb4-4" class="hljs-ln-code"><a href=""></a>rootdir <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>()</span>
+<span id="cb4-5" class="hljs-ln-code"><a href=""></a><span class="co"># or if not</span></span>
+<span id="cb4-6" class="hljs-ln-code"><a href=""></a><span class="co"># rootdir &lt;- getwd()</span></span>
+<span id="cb4-7" class="hljs-ln-code"><a href=""></a><span class="do">## Run the data preparation file</span></span>
+<span id="cb4-8" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"01_data_prep.R"</span>), </span>
+<span id="cb4-9" class="hljs-ln-code"><a href=""></a>       <span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-10" class="hljs-ln-code"><a href=""></a><span class="do">## Run the analysis file</span></span>
+<span id="cb4-11" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"02_analysis.R"</span>), </span>
+<span id="cb4-12" class="hljs-ln-code"><a href=""></a>       <span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-13" class="hljs-ln-code"><a href=""></a><span class="do">## Run the table file</span></span>
+<span id="cb4-14" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"03_tables.R"</span>), <span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-15" class="hljs-ln-code"><a href=""></a><span class="do">## Run the figure file</span></span>
+<span id="cb4-16" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"04_figures.R"</span>), <span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-17" class="hljs-ln-code"><a href=""></a><span class="do">## Run the appendix file</span></span>
+<span id="cb4-18" class="hljs-ln-code"><a href=""></a><span class="fu">source</span>(<span class="fu">file.path</span>(rootdir, <span class="st">"05_appendix.R"</span>), <span class="at">echo =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="notes-for-r" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Notes for R</h2>
+<p>The use of <code>echo=TRUE</code> is best, as it will show the code that is being run, and is thus more transparent to you and the future replicator.</p>
+</section>
+<section id="notes-for-python" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Notes for Python</h2>
+<ul>
+<li>There are many ways to do this in Python (as there are more in R)</li>
+<li>Defining <strong>functions</strong> separately, and then calling them in the <strong>main</strong> file.</li>
+<li>Constructing a <strong>package</strong> and calling that package.</li>
+</ul>
+</section>
+<section id="notes-for-python-1" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Notes for Python</h2>
+<p>If using <strong>procedural</strong> Python code, might use a <code>bash</code> script:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode bash hljs"><span id="cb5-1" class="hljs-ln-code"><a href=""></a><span class="co"># This is main.sh</span></span>
+<span id="cb5-2" class="hljs-ln-code"><a href=""></a><span class="ex">python</span> 01_data_prep.py</span>
+<span id="cb5-3" class="hljs-ln-code"><a href=""></a><span class="ex">python</span> 02_analysis.py</span>
+<span id="cb5-4" class="hljs-ln-code"><a href=""></a><span class="ex">python</span> 03_tables.py</span>
+<span id="cb5-5" class="hljs-ln-code"><a href=""></a><span class="ex">python</span> 04_figures.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="caution" class="slide level2 center">
+<h2>Caution</h2>
+<p>What you do should remain <strong>transparent</strong> to other users!</p>
+</section>
+<section id="caution-1" class="slide level2 center">
+<h2>Caution</h2>
+<p>Writing a scientific paper is different than writing a useful function on the internet.</p>
+<blockquote>
+<p>You are not writing <code>mynumpy</code>, you are writing a paper.</p>
+</blockquote>
+<p><em>… though there are grey areas there.</em></p>
+</section>
+<section id="takeaways-1" class="slide level2 smaller center">
+<h2>Takeaways</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">your code runs without problem, after all the debugging.</label></li>
+<li><label><input type="checkbox" checked="">your code runs without manual intervention, and with low effort</label></li>
+<li><label><input type="checkbox">it actually produces all the outputs</label></li>
+<li><label><input type="checkbox">your code generates a log file that you can inspect, and that you could share with others.</label></li>
+<li><label><input type="checkbox">it will run on somebody else’s computer</label></li>
+</ul>
 </section></section>
 <section>
 <section id="an-example" class="title-slide slide level1 center">
@@ -357,18 +741,18 @@ The results will be displayed on the screen.</code></pre>
 <section id="trying-it-out" class="slide level2 center">
 <h2>Trying it out</h2>
 <p>I created a <code>requirements.txt</code> file</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="va">numpy</span><span class="op">=</span>=2.2.0</span>
-<span id="cb4-2"><a href=""></a><span class="va">openai</span><span class="op">=</span>=1.57.4</span>
-<span id="cb4-3"><a href=""></a><span class="va">pandas</span><span class="op">=</span>=2.2.3</span>
-<span id="cb4-4"><a href=""></a><span class="ex">openpyxl</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href=""></a><span class="va">numpy</span><span class="op">=</span>=2.2.0</span>
+<span id="cb7-2"><a href=""></a><span class="va">openai</span><span class="op">=</span>=1.57.4</span>
+<span id="cb7-3"><a href=""></a><span class="va">pandas</span><span class="op">=</span>=2.2.3</span>
+<span id="cb7-4"><a href=""></a><span class="ex">openpyxl</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><em>(note: created using <a href="https://pypi.org/project/pipreqs/"><code>pipreqs</code></a> Python package, plus hand-edit).</em></p>
 </section>
 <section id="trying-it-out-2" class="slide level2 center">
 <h2>Trying it out (2)</h2>
 <p>Create environment</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href=""></a><span class="ex">python3.11</span> <span class="at">-m</span> venv venv-311</span>
-<span id="cb5-2"><a href=""></a><span class="bu">source</span> venv-311/bin/activate</span>
-<span id="cb5-3"><a href=""></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href=""></a><span class="ex">python3.11</span> <span class="at">-m</span> venv venv-311</span>
+<span id="cb8-2"><a href=""></a><span class="bu">source</span> venv-311/bin/activate</span>
+<span id="cb8-3"><a href=""></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><em>(note: running on Linux, openSUSE, Python 3.11.10)</em></p>
 </section>
 <section id="trying-it-out-3" class="slide level2 center">
@@ -385,23 +769,23 @@ The results will be displayed on the screen.</code></pre>
 <section id="trying-it-out-4" class="slide level2 center">
 <h2>Trying it out (4)</h2>
 <p>Run the script</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href=""></a><span class="ex">python</span> simple_example_chat1.py </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href=""></a><span class="ex">python</span> simple_example_chat1.py </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="failure" class="slide level2 center">
 <h2>Failure!</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href=""></a><span class="op">&gt;</span> python <span class="ex">simple_example_chat1.py</span> </span>
-<span id="cb7-2"><a href=""></a><span class="ex">Please</span> enter your OpenAI API key: </span>
-<span id="cb7-3"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/simple_example_chat1.py"</span>, line 24, in <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
-<span id="cb7-4"><a href=""></a>    <span class="ex">openai.api_key</span> = input<span class="er">(</span><span class="st">"Please enter your OpenAI API key: "</span><span class="kw">)</span></span>
-<span id="cb7-5"><a href=""></a>                     <span class="ex">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span></span>
-<span id="cb7-6"><a href=""></a><span class="ex">KeyboardInterrupt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href=""></a><span class="op">&gt;</span> python <span class="ex">simple_example_chat1.py</span> </span>
+<span id="cb10-2"><a href=""></a><span class="ex">Please</span> enter your OpenAI API key: </span>
+<span id="cb10-3"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/simple_example_chat1.py"</span>, line 24, in <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb10-4"><a href=""></a>    <span class="ex">openai.api_key</span> = input<span class="er">(</span><span class="st">"Please enter your OpenAI API key: "</span><span class="kw">)</span></span>
+<span id="cb10-5"><a href=""></a>                     <span class="ex">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span></span>
+<span id="cb10-6"><a href=""></a><span class="ex">KeyboardInterrupt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="attempt-to-fix" class="slide level2 center">
 <h2>Attempt to fix</h2>
 <ul>
 <li>README speaks of environment variable</li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href=""></a><span class="bu">export</span> <span class="va">OPENAI_API_KEY</span><span class="op">=</span>sk-proj-lxxxxxxxxxx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href=""></a><span class="bu">export</span> <span class="va">OPENAI_API_KEY</span><span class="op">=</span>sk-proj-lxxxxxxxxxx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Run again, same error!</li>
 </ul>
@@ -419,11 +803,11 @@ The results will be displayed on the screen.</code></pre>
 <ul>
 <li>I fixed the script to read from environment variable.</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a>openai.api_key <span class="op">=</span> os.environ.get(<span class="st">'OPENAI_API_KEY'</span>)</span>
-<span id="cb9-2"><a href=""></a></span>
-<span id="cb9-3"><a href=""></a><span class="co"># If the API key isn't found in the environment variable, prompt the user for it</span></span>
-<span id="cb9-4"><a href=""></a><span class="cf">if</span> <span class="kw">not</span> openai.api_key:</span>
-<span id="cb9-5"><a href=""></a>    openai.api_key <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Please enter your OpenAI API key: "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href=""></a>openai.api_key <span class="op">=</span> os.environ.get(<span class="st">'OPENAI_API_KEY'</span>)</span>
+<span id="cb12-2"><a href=""></a></span>
+<span id="cb12-3"><a href=""></a><span class="co"># If the API key isn't found in the environment variable, prompt the user for it</span></span>
+<span id="cb12-4"><a href=""></a><span class="cf">if</span> <span class="kw">not</span> openai.api_key:</span>
+<span id="cb12-5"><a href=""></a>    openai.api_key <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Please enter your OpenAI API key: "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <blockquote>
 <p>NEVER RECORD YOUR API KEY IN SCRIPTS!</p>
 </blockquote>
@@ -437,21 +821,21 @@ The results will be displayed on the screen.</code></pre>
 </section>
 <section id="result" class="slide level2 smaller center">
 <h2>Result</h2>
-<div class="sourceCode" id="cb10" data-fold="true" data-code-line-numbers="9,13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href=""></a><span class="ex">Traceback</span> <span class="er">(</span><span class="ex">most</span> recent call last<span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb10-2"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/simple_example_chat1.py"</span>, line 37, in <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
-<span id="cb10-3"><a href=""></a>    <span class="ex">completion</span> = openai.ChatCompletion.create<span class="er">(</span></span>
-<span id="cb10-4"><a href=""></a>                 <span class="ex">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span></span>
-<span id="cb10-5"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/venv-311/lib64/python3.11/site-packages/openai/lib/_old_api.py"</span>, line 39, in __call__</span>
-<span id="cb10-6"><a href=""></a>    <span class="ex">raise</span> APIRemovedInV1<span class="er">(</span><span class="va">symbol</span><span class="op">=</span>self._symbol<span class="kw">)</span></span>
-<span id="cb10-7"><a href=""></a><span class="ex">openai.lib._old_api.APIRemovedInV1:</span> </span>
-<span id="cb10-8"><a href=""></a></span>
-<span id="cb10-9"><a href=""></a><span class="ex">You</span> tried to access openai.ChatCompletion, but this is no longer supported in openai<span class="op">&gt;</span>=1.0.0 <span class="at">-</span> see the README at https://github.com/openai/openai-python for the API.</span>
-<span id="cb10-10"><a href=""></a></span>
-<span id="cb10-11"><a href=""></a><span class="ex">You</span> can run <span class="kw">`</span><span class="ex">openai</span> migrate<span class="kw">`</span> to automatically upgrade your codebase to use the 1.0.0 interface. </span>
-<span id="cb10-12"><a href=""></a></span>
-<span id="cb10-13"><a href=""></a><span class="ex">Alternatively,</span> you can pin your installation to the old version, e.g. <span class="kw">`</span><span class="ex">pip</span> install openai==0.28<span class="kw">`</span></span>
-<span id="cb10-14"><a href=""></a></span>
-<span id="cb10-15"><a href=""></a><span class="ex">A</span> detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13" data-fold="true" data-code-line-numbers="9,13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href=""></a><span class="ex">Traceback</span> <span class="er">(</span><span class="ex">most</span> recent call last<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb13-2"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/simple_example_chat1.py"</span>, line 37, in <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb13-3"><a href=""></a>    <span class="ex">completion</span> = openai.ChatCompletion.create<span class="er">(</span></span>
+<span id="cb13-4"><a href=""></a>                 <span class="ex">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span></span>
+<span id="cb13-5"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/venv-311/lib64/python3.11/site-packages/openai/lib/_old_api.py"</span>, line 39, in __call__</span>
+<span id="cb13-6"><a href=""></a>    <span class="ex">raise</span> APIRemovedInV1<span class="er">(</span><span class="va">symbol</span><span class="op">=</span>self._symbol<span class="kw">)</span></span>
+<span id="cb13-7"><a href=""></a><span class="ex">openai.lib._old_api.APIRemovedInV1:</span> </span>
+<span id="cb13-8"><a href=""></a></span>
+<span id="cb13-9"><a href=""></a><span class="ex">You</span> tried to access openai.ChatCompletion, but this is no longer supported in openai<span class="op">&gt;</span>=1.0.0 <span class="at">-</span> see the README at https://github.com/openai/openai-python for the API.</span>
+<span id="cb13-10"><a href=""></a></span>
+<span id="cb13-11"><a href=""></a><span class="ex">You</span> can run <span class="kw">`</span><span class="ex">openai</span> migrate<span class="kw">`</span> to automatically upgrade your codebase to use the 1.0.0 interface. </span>
+<span id="cb13-12"><a href=""></a></span>
+<span id="cb13-13"><a href=""></a><span class="ex">Alternatively,</span> you can pin your installation to the old version, e.g. <span class="kw">`</span><span class="ex">pip</span> install openai==0.28<span class="kw">`</span></span>
+<span id="cb13-14"><a href=""></a></span>
+<span id="cb13-15"><a href=""></a><span class="ex">A</span> detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="this-is-a-standard-python---api-issue" class="slide level2 smaller center">
 <h2>THIS IS A STANDARD PYTHON - API ISSUE!</h2>
@@ -472,15 +856,15 @@ The results will be displayed on the screen.</code></pre>
 <ul>
 <li>Fix <code>requirements.txt</code>, re-install</li>
 </ul>
-<div class="sourceCode" id="cb11" data-fold="true" data-code-line-numbers="9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href=""></a><span class="op">&gt;</span> python <span class="ex">simple_example_chat1.py</span> </span>
-<span id="cb11-2"><a href=""></a><span class="ex">Traceback</span> <span class="er">(</span><span class="ex">most</span> recent call last<span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb11-3"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/simple_example_chat1.py"</span>, line 37, in <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
-<span id="cb11-4"><a href=""></a>    <span class="ex">completion</span> = openai.ChatCompletion.create<span class="er">(</span></span>
-<span id="cb11-5"><a href=""></a>                 <span class="ex">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span></span>
-<span id="cb11-6"><a href=""></a><span class="op">&lt;</span>snip<span class="op">&gt;</span></span>
-<span id="cb11-7"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/venv-311/lib64/python3.11/site-packages/openai/api_requestor.py"</span>, line 765, in _interpret_response_line</span>
-<span id="cb11-8"><a href=""></a>    <span class="ex">raise</span> self.handle_error_response<span class="er">(</span></span>
-<span id="cb11-9"><a href=""></a><span class="ex">openai.error.InvalidRequestError:</span> The model <span class="kw">`</span><span class="ex">gpt-4-0613</span><span class="kw">`</span> does not exist or you do not have access to it.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14" data-fold="true" data-code-line-numbers="9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href=""></a><span class="op">&gt;</span> python <span class="ex">simple_example_chat1.py</span> </span>
+<span id="cb14-2"><a href=""></a><span class="ex">Traceback</span> <span class="er">(</span><span class="ex">most</span> recent call last<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb14-3"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/simple_example_chat1.py"</span>, line 37, in <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb14-4"><a href=""></a>    <span class="ex">completion</span> = openai.ChatCompletion.create<span class="er">(</span></span>
+<span id="cb14-5"><a href=""></a>                 <span class="ex">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span></span>
+<span id="cb14-6"><a href=""></a><span class="op">&lt;</span>snip<span class="op">&gt;</span></span>
+<span id="cb14-7"><a href=""></a>  <span class="ex">File</span> <span class="st">"/path/korinek-2023/venv-311/lib64/python3.11/site-packages/openai/api_requestor.py"</span>, line 765, in _interpret_response_line</span>
+<span id="cb14-8"><a href=""></a>    <span class="ex">raise</span> self.handle_error_response<span class="er">(</span></span>
+<span id="cb14-9"><a href=""></a><span class="ex">openai.error.InvalidRequestError:</span> The model <span class="kw">`</span><span class="ex">gpt-4-0613</span><span class="kw">`</span> does not exist or you do not have access to it.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="fixing-this" class="slide level2 smaller center">
 <h2>Fixing this</h2>
@@ -551,6 +935,229 @@ The results will be displayed on the screen.</code></pre>
 </div>
 </div></div>
 </section></section>
+<section>
+<section id="next" class="title-slide slide level1 center">
+<h1>Next…</h1>
+
+</section>
+<section class="slide level2 center">
+
+<p><em>One of the most frequently asked questions…</em></p>
+</section>
+<section class="slide level2 center">
+
+<p><em>“but I have confidential data…”</em></p>
+</section>
+<section class="slide level2 center">
+
+<p><strong>Equivalently</strong></p>
+</section>
+<section class="slide level2 center">
+
+<p><em>“but I have a big LLM model…”</em></p>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="so-what-happens-when" class="title-slide slide level1 center">
+<h1>So what happens when…</h1>
+
+</section>
+<section id="you-cannot-share-a-file" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">You cannot share a file</h2>
+</section>
+<section id="the-file-no-longer-exists-on-the-internet" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">The file no longer exists on the internet</h2>
+</section>
+<section id="the-code-takes-ages-to-run" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">The code takes ages to run</h2>
+</section>
+<section class="slide level2 center">
+
+<p>How can you show that you actually ran the code?</p>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="creating-log-files" class="title-slide slide level1 center">
+<h1>Creating log files</h1>
+<p>In order to document that you have actually run your code, a <strong>log file</strong>, a transcript, or some other evidence, may be useful. It may even be required by certain journals.</p>
+</section>
+<section id="tldr-2" class="slide level2 center">
+<h2>TL;DR</h2>
+<ul>
+<li><strong>Log files</strong> are a way to document that you have run your code.</li>
+<li>In particular for code that runs for a very long time, or that uses data that cannot be shared, log files may be the only way to document basic reproducibility.</li>
+</ul>
+</section>
+<section id="overview" class="slide level2 center">
+<h2>Overview</h2>
+<div>
+<ul>
+<li class="fragment">Most statistical software has ways to keep a record that it has run, with the details of that run.</li>
+<li class="fragment">Some make it easier than others.</li>
+<li class="fragment">You may need to instruct your code to be “verbose”, or to “log” certain events.</li>
+<li class="fragment">You may need to use a command-line option to the software to create a log file.</li>
+</ul>
+</div>
+<aside class="notes">
+<p>I do note that we are typically only looking to document what the statistical code does, at a high level. We are not looking to document system calls, fine-grained data access, etc. Computer scientists and IT security mavens may be interested in such details, but economists are typically not.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 center">
+
+<p>In almost all cased, the generated log files are simple text files, without any formatting, and can be read by any text editor (e.g., Visual Studio Code, Notepad++, etc.).</p>
+<p>If not, ensure that they are (avoid <em>Stata SMCL</em> files, for example, or <em>iPython</em> output).</p>
+</section>
+<section id="creating-log-files-explicitly" class="slide level2 center">
+<h2>Creating log files explicitly</h2>
+<p>Generically: see <a href="https://larsvilhuber.github.io/self-checking-reproducibility/presentation/#/creating-log-files"><em>separate</em> tutorial</a>.</p>
+</section>
+<section id="python" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Python</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Create a wrapper that will capture the calls for any function</p>
+</div><div class="column" style="width:70%;">
+<div class="sourceCode" id="cb17" data-code-line-numbers="2-9"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb17-1" class="hljs-ln-code"><a href=""></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb17-2" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> track_calls(func):</span>
+<span id="cb17-3" class="hljs-ln-code"><a href=""></a>    <span class="kw">def</span> wrapper(<span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
+<span id="cb17-4" class="hljs-ln-code"><a href=""></a>        <span class="cf">with</span> <span class="bu">open</span>(<span class="st">'function_log.txt'</span>, <span class="st">'a'</span>) <span class="im">as</span> f:</span>
+<span id="cb17-5" class="hljs-ln-code"><a href=""></a>            timestamp <span class="op">=</span> datetime.now().strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S'</span>)</span>
+<span id="cb17-6" class="hljs-ln-code"><a href=""></a>            f.write(<span class="ss">f"[</span><span class="sc">{</span>timestamp<span class="sc">}</span><span class="ss">] Calling </span><span class="sc">{</span>func<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss"> with args: </span><span class="sc">{</span>args<span class="sc">}</span><span class="ss">, kwargs: </span><span class="sc">{</span>kwargs<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb17-7" class="hljs-ln-code"><a href=""></a>        result <span class="op">=</span> func(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
+<span id="cb17-8" class="hljs-ln-code"><a href=""></a>        <span class="cf">return</span> result</span>
+<span id="cb17-9" class="hljs-ln-code"><a href=""></a>    <span class="cf">return</span> wrapper</span>
+<span id="cb17-10" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb17-11" class="hljs-ln-code"><a href=""></a><span class="co"># Usage</span></span>
+<span id="cb17-12" class="hljs-ln-code"><a href=""></a><span class="at">@track_calls</span></span>
+<span id="cb17-13" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> my_function(x, y,default<span class="op">=</span><span class="st">"TRUE"</span>):</span>
+<span id="cb17-14" class="hljs-ln-code"><a href=""></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb17-15" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb17-16" class="hljs-ln-code"><a href=""></a>my_function(<span class="dv">1</span>, <span class="dv">2</span>,default<span class="op">=</span><span class="st">"false"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="python-1" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Python</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Activate the wrapper</p>
+</div><div class="column" style="width:70%;">
+<div class="sourceCode" id="cb18" data-code-line-numbers="12"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb18-1" class="hljs-ln-code"><a href=""></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb18-2" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> track_calls(func):</span>
+<span id="cb18-3" class="hljs-ln-code"><a href=""></a>    <span class="kw">def</span> wrapper(<span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
+<span id="cb18-4" class="hljs-ln-code"><a href=""></a>        <span class="cf">with</span> <span class="bu">open</span>(<span class="st">'function_log.txt'</span>, <span class="st">'a'</span>) <span class="im">as</span> f:</span>
+<span id="cb18-5" class="hljs-ln-code"><a href=""></a>            timestamp <span class="op">=</span> datetime.now().strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S'</span>)</span>
+<span id="cb18-6" class="hljs-ln-code"><a href=""></a>            f.write(<span class="ss">f"[</span><span class="sc">{</span>timestamp<span class="sc">}</span><span class="ss">] Calling </span><span class="sc">{</span>func<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss"> with args: </span><span class="sc">{</span>args<span class="sc">}</span><span class="ss">, kwargs: </span><span class="sc">{</span>kwargs<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb18-7" class="hljs-ln-code"><a href=""></a>        result <span class="op">=</span> func(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
+<span id="cb18-8" class="hljs-ln-code"><a href=""></a>        <span class="cf">return</span> result</span>
+<span id="cb18-9" class="hljs-ln-code"><a href=""></a>    <span class="cf">return</span> wrapper</span>
+<span id="cb18-10" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb18-11" class="hljs-ln-code"><a href=""></a><span class="co"># Usage</span></span>
+<span id="cb18-12" class="hljs-ln-code"><a href=""></a><span class="at">@track_calls</span></span>
+<span id="cb18-13" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> my_function(x, y,default<span class="op">=</span><span class="st">"TRUE"</span>):</span>
+<span id="cb18-14" class="hljs-ln-code"><a href=""></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb18-15" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb18-16" class="hljs-ln-code"><a href=""></a>my_function(<span class="dv">1</span>, <span class="dv">2</span>,default<span class="op">=</span><span class="st">"false"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="python-2" class="slide level2 center" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Python</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Ideally, capture the output</p>
+</div><div class="column" style="width:70%;">
+<div class="sourceCode" id="cb19" data-code-line-numbers="8"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb19-1" class="hljs-ln-code"><a href=""></a><span class="co"># Usage</span></span>
+<span id="cb19-2" class="hljs-ln-code"><a href=""></a><span class="at">@track_calls</span></span>
+<span id="cb19-3" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> my_function(x, y,default<span class="op">=</span><span class="st">"TRUE"</span>):</span>
+<span id="cb19-4" class="hljs-ln-code"><a href=""></a>    <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb19-5" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb19-6" class="hljs-ln-code"><a href=""></a>my_function(<span class="dv">1</span>, <span class="dv">2</span>,default<span class="op">=</span><span class="st">"false"</span>)</span>
+<span id="cb19-7" class="hljs-ln-code"><a href=""></a><span class="co"># Output</span></span>
+<span id="cb19-8" class="hljs-ln-code"><a href=""></a><span class="co"># [2024-12-15 12:05:37] Calling my_function with args: (1, 2), kwargs: {'default': 'false'}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section></section>
+<section>
+<section id="creating-log-files-automatically" class="title-slide slide level1 center">
+<h1>Creating log files automatically</h1>
+<p>An alternative (or complement) to creating log files explicitly is to use native functionality of the software to create them. This usually is triggered when using the <strong>command line</strong> to run the software, and thus may be considered an <strong>advanced topic.</strong> The examples below are for Linux/macOS, but similar functionality exists for Windows.</p>
+</section>
+<section id="python-3" class="slide level2 center" data-auto-animate="true" data-transition="fade">
+<h2 data-id="quarto-animate-title">Python</h2>
+<p>In order to capture screen output in Python, on Unix-like system (Linux, macOS), the following can be run:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode bash hljs"><span id="cb20-1" class="hljs-ln-code"><a href=""></a><span class="ex">python</span> main.py <span class="kw">|</span> <span class="fu">tee</span> main.log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>which will create a log file with everything that would normally appear on the console using the <code>tee</code> command.</p>
+</section>
+<section id="takeaways-2" class="slide level2 smaller center">
+<h2>Takeaways</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">your code runs without problem, after all the debugging.</label></li>
+<li><label><input type="checkbox" checked="">your code runs without manual intervention, and with low effort</label></li>
+<li><label><input type="checkbox" checked="">it actually produces all the outputs</label></li>
+<li><label><input type="checkbox" checked="">your code generates a log file that you can inspect, and that you could share with others.</label></li>
+<li><label><input type="checkbox">it will run on somebody else’s computer</label></li>
+</ul>
+</section></section>
+<section>
+<section id="environments" class="title-slide slide level1 center">
+<h1>Environments</h1>
+
+</section>
+<section id="tldr-3" class="slide level2 center">
+<h2>TL;DR</h2>
+<ul>
+<li>Search paths and environments are key concepts to create <strong>portable</strong>, <strong>reproducible</strong> code, by <strong>isolating</strong> each project from others.</li>
+<li>Methods exist in all (statistical) programming languages</li>
+<li>For more details, see <a href="https://larsvilhuber.github.io/self-checking-reproducibility/10-creating-environments.html">other guidance</a></li>
+</ul>
+</section>
+<section id="what-software-supports-environments" class="slide level2 center">
+<h2>What software supports environments?</h2>
+<ul>
+<li>R: <code>renv</code> package</li>
+<li>Python: <code>venv</code> or <code>virtualenv</code> module</li>
+<li>Julia: <code>Pkg</code> module</li>
+</ul>
+</section>
+<section id="understanding-search-paths" class="slide level2 center">
+<h2>Understanding search paths</h2>
+<p>Generically, all “environments” simply modify where the specific <strong>software searches</strong> (the “search path”) for its components, and in particular any supplementary components (packages, libraries, etc.).<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a></p>
+<aside></aside></section></section>
+<section>
+<section id="reproducing-and-documenting-environments-in-python" class="title-slide slide level1 center">
+<h1>Reproducing and documenting environments in Python</h1>
+<p>Python allows for pinpointing exact versions of packages in the <em>PyPi</em> repository. This is done by creating a <code>requirements.txt</code> file that lists all the packages that are needed to run your code. In principle, this file can be used by others to recreate the environment you used. The problem is that it might contain TOO many packages, some of which are not relevant, even if you carefully constructed the environment, because it will contain dependencies that are specific to your platform (OS or version of Python).</p>
+</section>
+<section id="the-issue" class="slide level2 center">
+<h2>The issue</h2>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href=""></a><span class="ex">pip</span> freeze</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>will output all the packages installed in your environment. These will include the packages you explicitly installed, but also the packages that were installed as dependencies. Some of those dependencies may be specific to your operating system or environment. In some cases, they contain packages that you needed to develop the code, but that are not needed to run it.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href=""></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>will output all the packages installed in your environment in a file called <code>requirements.txt</code>. This file can be used to recreate the environment. Obviously, because of the above issue, it will likely contain too many packages.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href=""></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>will install all the packages listed in <code>requirements.txt</code>. If you run this on your computer, in a different environment, this will duplicate your environment, which is fine. But it probably will not work on somebody else’s Mac, or Linux, system, and may not even work on somebody else’s Windows computer.</p>
+</section>
+<section id="the-solution" class="slide level2 center scrollable">
+<h2>The solution</h2>
+<p>The solution is to create a minimal environment, and document it. This is done in two steps:</p>
+<ol type="1">
+<li>Identify the packages that are needed to run your code. There are packages that may help you with this, but in principle, you want to include everything you explicitly <code>import</code> in your code, and nothing else. This is the minimal environment.</li>
+<li>Prune the <code>requirements.txt</code> file to only include the packages that are needed to run your code. This will be the file you provide to replicators to recreate your necessary environment, and let the package installers solve all the other dependencies.</li>
+</ol>
+<p>The resulting <code>requirements.txt</code> file will contain “pinned” versions of the packages you have, so it will be very precise. Possibly overly precise.</p>
+</section></section>
 <section id="why" class="title-slide slide level1 center">
 <h1>Why</h1>
 <div class="columns">
@@ -596,14 +1203,14 @@ The results will be displayed on the screen.</code></pre>
 </section>
 <section id="what-did-claude-say" class="slide level2 center">
 <h2>What did Claude say?</h2>
-<p><a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p>
+<p>[^claude1]</p>
 <pre><code>A presentation_ on the reproducibility of AI-based research should comprehensively address several critical aspects: 
 
 1. Methodology Transparency
    - Detailed documentation of data sources, preprocessing steps, and data cleaning techniques
    - Complete description of model architecture, hyperparameters, and training procedures
    - Explicit explanation of any data augmentation or synthetic data generation methods</code></pre>
-<aside></aside></section>
+</section>
 <section class="slide level2 center">
 
 <pre><code>2. Computational Environment
@@ -675,7 +1282,7 @@ By comprehensively addressing these areas, the presentation can provide a robust
 </section>
 <section id="what-did-openai-say" class="slide level2 smaller center">
 <h2>What did OpenAI say?</h2>
-<p><a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a></p>
+<p><a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>A presentation on the reproducibility of AI-based research should address several key areas to ensu
@@ -747,9 +1354,10 @@ Korinek, Anton. 2023a. <span>“Data and <span>Code</span> for: <span>Generative
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>claude.ai, Haiku, Normal, 2024-12-14 20:47</p></li>
-<li id="fn2"><p>claude.ai, Haiku, Normal, 2024-12-14 20:47</p></li>
-<li id="fn3"><p>OpenAI, queried on 2024-12-14, see <code>lars_query.py</code> and <code>lars-prompt1.txt</code></p></li>
+<li id="fn1"><p>Source: <a href="https://www.pngall.com/warning-sign-png/download/69408">Red Warning PNG Clipart</a>, CC-BY.</p></li>
+<li id="fn2"><p>Results computed on Nov 26, 2023 based on a scan of replication packages conducted by Sebastian Kranz. 2023. “Economic Articles with Data”. https://ejd.econ.mathematik.uni-ulm.de/, searching for the words <code>main</code>, <code>master</code>, <code>makefile</code>, <code>dockerfile</code>, <code>apptainer</code>, <code>singularity</code> in any of the program files in those replication packages. Code not yet integrated into this presentation.</p></li>
+<li id="fn3"><p>Formally, this is true for operating systems as well, and in some cases, the operating system and the programming language interact (for instance, in Python).</p></li>
+<li id="fn4"><p>OpenAI, queried on 2024-12-14, see <code>lars_query.py</code> and <code>lars-prompt1.txt</code></p></li>
 </ol>
 </section>
     </div>
