@@ -79,6 +79,7 @@ jobs:
       with:
           name: artifact-presentation
           path: |
+            presentation/images/
             presentation/index_files/
             presentation/index.html
           retention-days: 1
