@@ -1,5 +1,6 @@
 format: 
   revealjs:
+    baseurl: https://larsvilhuber.github.io/reproducibility-for-llm/presentation/
     scrollable: true
     margin: 0
     code-overflow: wrap
