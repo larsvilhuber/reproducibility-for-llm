@@ -2,3 +2,4 @@ numpy==2.2.0
 openai==0.28
 pandas==2.2.3
 openpyxl
+google.generativeai

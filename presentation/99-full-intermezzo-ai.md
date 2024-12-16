@@ -108,3 +108,15 @@ mylines("korinek-2023/lars-prompt1.out",charlimit="99",prefix="")
 
 [^openai1]: OpenAI, queried on 2024-12-14, see `lars_query.py` and `lars-prompt1.txt`
 
+
+## What did Gemini say? {.smaller}
+
+[^gemini1]
+
+```{r}
+# Read and display the content of the prompts
+gemini.version <- "20241216_101942"
+mylines(paste0("korinek-2023/lars-prompt1_gemini_",gemini.version,".out"),charlimit="99",prefix="")
+```
+
+[^gemini1]: Gemini, queried on 2024-12-15, see `lars_query_gemini.py` and `lars-prompt1.txt`

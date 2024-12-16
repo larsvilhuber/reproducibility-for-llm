@@ -353,7 +353,7 @@ By comprehensively addressing these areas, the presentation can provide a robust
 <h2>Tools and Standards</h2>
 <p>In Economics,</p>
 <ul>
-<li>Use the <a href="https://social-science-data-editors.github.io/template_README/">Template README</a></li>
+<li>Use the <a href="https://social-science-data-editors.github.io/template_README/">Template README</a> (<a href="https://larsvilhuber.github.io/readme-presentation/">presentation</a>)</li>
 <li>Describe data provenance and access conditions for all <strong>raw data</strong></li>
 <li>Describe all data transformations starting with <strong>raw data</strong></li>
 <li>Provide <strong>all code</strong>, including for data you cannot share</li>
@@ -393,6 +393,10 @@ By comprehensively addressing these areas, the presentation can provide a robust
 </ul></li>
 </ul>
 </div>
+</section>
+<section id="guidance-in-readme" class="slide level2 center">
+<h2>Guidance in README</h2>
+<p><a href="https://social-science-data-editors.github.io/template_README/template-README.html#data-availability-and-provenance-statements"><img data-src="images/readme-dcas.png"></a></p>
 </section>
 <section id="data-provenance" class="slide level2 center">
 <h2>Data Provenance</h2>
@@ -1158,21 +1162,60 @@ The results will be displayed on the screen.</code></pre>
 </ol>
 <p>The resulting <code>requirements.txt</code> file will contain “pinned” versions of the packages you have, so it will be very precise. Possibly overly precise.</p>
 </section></section>
-<section id="why" class="title-slide slide level1 center">
-<h1>Why</h1>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Unpredictable things happening to your computing environment:</p>
-<ul>
-<li>Software updates</li>
-<li>Change of employer</li>
-<li>Sudden need for a new computer</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://media1.tenor.com/m/1L7rJphSMxQAAAAC/fail-fall.gif"></p>
-</div></div>
-</section>
+<section>
+<section id="conclusion" class="title-slide slide level1 center">
+<h1>Conclusion</h1>
 
+</section>
+<section id="ai-and-llms-are-not-special" class="slide level2 center">
+<h2>AI and LLMs are not special</h2>
+<p>… when it comes to reproducibility</p>
+</section>
+<section id="but-difficulties-are-magnified" class="slide level2 center">
+<h2>But difficulties are magnified</h2>
+<p>… compared to the <strong>average</strong> difficulty in economics papers</p>
+</section>
+<section id="solutions" class="slide level2 center">
+<h2>Solutions</h2>
+<ul>
+<li>Be <strong>reproducible</strong> from the start
+<ul>
+<li>Use <strong>environments</strong></li>
+<li>Use <strong>logging</strong> as evidence, especially when <strong>repetitions</strong> are expensive</li>
+</ul></li>
+</ul>
+</section>
+<section id="solutions-1" class="slide level2 center">
+<h2>Solutions</h2>
+<ul>
+<li>Consider how and where to <strong>preserve</strong>
+<ul>
+<li>industry repositories may be fine for <strong>sharing</strong></li>
+<li>academic repositories (<strong>Zenodo</strong>, <strong>Dataverse</strong>) handle <strong>preservation</strong></li>
+<li>Toolkit is still in its infancy for the preservation of large data (<span class="math inline">\(&gt;=\)</span> 200GB)</li>
+</ul></li>
+</ul>
+</section>
+<section id="solutions-2" class="slide level2 center">
+<h2>Solutions</h2>
+<ul>
+<li><strong>Computational empathy</strong>
+<ul>
+<li>Remember your own difficulties in getting this to work</li>
+<li>Now put yourself in others’ computer (shoes)</li>
+<li>Be very clear about what is needed - you are <strong>cutting edge</strong>, others may not be!</li>
+</ul></li>
+</ul>
+</section>
+<section id="solutions-3" class="slide level2 center">
+<h2>Solutions</h2>
+<ul>
+<li>Use existing <strong>resources</strong>
+<ul>
+<li><a href="https://social-science-data-editors.github.io/template_README/">Template README</a> (<a href="https://larsvilhuber.github.io/readme-presentation/">presentation</a>) as guidance</li>
+</ul></li>
+</ul>
+</section></section>
 <section id="questions" class="title-slide slide level1 center">
 <h1>Questions</h1>
 
@@ -1187,7 +1230,7 @@ The results will be displayed on the screen.</code></pre>
 <h2>This presentation</h2>
 <ul>
 <li><a href="https://github.com/larsvilhuber/reproducibility-for-llm">Github</a></li>
-<li><a href="https://larsvilhuber.github.io/reproducibility-for-llm/presentation/">Presentation</a></li>
+<li><a href="https://larsvilhuber.github.io/reproducibility-for-llm/presentation/">Presentation</a> (<a href="presentation.pdf">PDF</a>)</li>
 </ul>
 <p>Content is <a href="https://creativecommons.org/licenses/by-nc/4.0/"><img data-src="images/cc-by-nc-80x15.png" alt="License: CC BY-NC 4.0"></a>.</p>
 </section></section>
@@ -1334,6 +1377,102 @@ By comprehensively addressing these areas, the presentation can provide a robust
 By covering these areas, the presentation can provide a well-rounded view of the challenges and sol</code></pre>
 </div>
 </div>
+<aside></aside></section>
+<section id="what-did-gemini-say" class="slide level2 smaller center">
+<h2>What did Gemini say?</h2>
+<p><a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>A presentation on the reproducibility of AI-based research should address a multifaceted issue, cov
+
+**1. Defining Reproducibility in the Context of AI:**
+
+* **What does reproducibility mean in AI?** Differentiate between:
+    * **Replication:** Re-running the same code on the same data and getting the same results.
+    * **Reproduction:** Re-implementing the method from scratch based on the paper and getting simi
+    * **Robustness:** Evaluating the model's performance on different datasets or under different c
+* **Why is reproducibility important?** Highlight the benefits:
+    * **Scientific validity:** Ensuring the reliability and trustworthiness of research findings.
+    * **Progress and innovation:** Building upon existing work and accelerating advancements.
+    * **Transparency and accountability:** Allowing for scrutiny and identification of potential bi
+    * **Practical applications:** Facilitating the deployment and adoption of AI models in real-wor
+
+**2. Challenges to Reproducibility in AI:**
+
+* **Code and Implementation:**
+    * **Lack of code availability:** Papers often lack publicly available code or provide incomplet
+    * **Poor code quality:** Unstructured, undocumented, or hard-to-understand code.
+    * **Dependency issues:** Incompatible library versions, operating systems, or hardware.
+    * **Hidden implementation details:** Crucial parameters or preprocessing steps not explicitly m
+* **Data:**
+    * **Data unavailability:** Datasets are often proprietary, sensitive, or difficult to access.
+    * **Data preprocessing:** Inconsistent or undocumented data cleaning, transformation, or augmen
+    * **Data versioning:** Lack of clarity on which version of the dataset was used.
+    * **Data bias:** Datasets may contain biases that affect the model's performance and generaliza
+* **Computational Environment:**
+    * **Hardware differences:** Variations in CPU, GPU, and memory can impact results.
+    * **Software environment:** Differences in operating systems, libraries, and drivers.
+    * **Randomness:** The use of random seeds and initialization can lead to variations in results.
+* **Methodological Issues:**
+    * **Incomplete descriptions:** Lack of detail in the paper about the experimental setup, hyperp
+    * **Cherry-picking results:** Reporting only the best results and ignoring less favorable outco
+    * **Lack of statistical rigor:** Insufficient statistical analysis or inappropriate use of stat
+* **Human Factors:**
+    * **Time constraints:** Researchers may lack the time or resources to properly document their w
+    * **Incentives:** The current academic system may not adequately reward reproducible research.
+    * **Lack of awareness:** Researchers may not be fully aware of the importance of reproducibilit
+
+**3. Solutions and Best Practices for Improving Reproducibility:**
+
+* **Code Sharing and Version Control:**
+    * **Public repositories:** Using platforms like GitHub, GitLab, or Bitbucket to share code.
+    * **Version control:** Employing Git to track changes and manage different versions of the code
+    * **Clear documentation:** Providing comprehensive README files and comments within the code.
+* **Data Management:**
+    * **Public datasets:** Utilizing publicly available datasets whenever possible.
+    * **Data sharing platforms:** Using platforms like Kaggle or Zenodo to share datasets.
+    * **Data provenance:** Documenting the origin, processing, and versioning of the data.
+    * **Data anonymization:** Ensuring the privacy and security of sensitive data.
+* **Computational Environment Management:**
+    * **Containerization:** Using Docker or Singularity to create reproducible environments.
+    * **Virtual environments:** Using tools like conda or venv to manage dependencies.
+    * **Configuration files:** Storing all necessary parameters and settings in configuration files
+* **Methodological Transparency:**
+    * **Detailed descriptions:** Providing comprehensive descriptions of the experimental setup, hy
+    * **Open access publications:** Publishing research in open access journals or repositories.
+    * **Pre-registration:** Registering research plans before conducting experiments.
+    * **Statistical rigor:** Employing appropriate statistical methods and reporting confidence int
+* **Community Efforts and Tools:**
+    * **Reproducibility checklists:** Using checklists to ensure that all necessary steps are taken
+    * **Reproducibility badges:** Awarding badges to papers that meet certain reproducibility crite
+    * **Reproducibility workshops and tutorials:** Providing training and resources to researchers.
+    * **Open-source tools and libraries:** Developing and using tools that facilitate reproducible 
+
+**4. Call to Action:**
+
+* **Encourage researchers to adopt best practices.**
+* **Promote the use of open-source tools and platforms.**
+* **Advocate for changes in the academic system to incentivize reproducible research.**
+* **Raise awareness about the importance of reproducibility in AI.**
+
+**Presentation Structure Suggestions:**
+
+* **Start with a compelling example** of a reproducibility failure in AI research.
+* **Clearly define the problem** and its implications.
+* **Present the challenges** in a structured and understandable way.
+* **Offer practical solutions** and best practices.
+* **Conclude with a call to action** and a positive outlook for the future of reproducible AI resea
+
+**Visual Aids:**
+
+* **Use clear and concise slides.**
+* **Include diagrams and illustrations to explain complex concepts.**
+* **Show examples of good and bad code documentation.**
+* **Use charts and graphs to visualize data and results.**
+
+By addressing these key areas, your presentation will provide a comprehensive overview of the chall</code></pre>
+</div>
+</div>
 <aside></aside></section></section>
 <section id="references" class="title-slide slide level1 smaller scrollable">
 <h1>References</h1>
@@ -1358,6 +1497,7 @@ Korinek, Anton. 2023a. <span>“Data and <span>Code</span> for: <span>Generative
 <li id="fn2"><p>Results computed on Nov 26, 2023 based on a scan of replication packages conducted by Sebastian Kranz. 2023. “Economic Articles with Data”. https://ejd.econ.mathematik.uni-ulm.de/, searching for the words <code>main</code>, <code>master</code>, <code>makefile</code>, <code>dockerfile</code>, <code>apptainer</code>, <code>singularity</code> in any of the program files in those replication packages. Code not yet integrated into this presentation.</p></li>
 <li id="fn3"><p>Formally, this is true for operating systems as well, and in some cases, the operating system and the programming language interact (for instance, in Python).</p></li>
 <li id="fn4"><p>OpenAI, queried on 2024-12-14, see <code>lars_query.py</code> and <code>lars-prompt1.txt</code></p></li>
+<li id="fn5"><p>Gemini, queried on 2024-12-15, see <code>lars_query_gemini.py</code> and <code>lars-prompt1.txt</code></p></li>
 </ol>
 </section>
     </div>
