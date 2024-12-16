@@ -47,28 +47,9 @@ bibliography: "paper.bib"
 ```{r, child=c('35-environments-python.md')}
 ```
 
+```{r, child=c('50-conclusion.md')}
+```
 
-# Why
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-Unpredictable things happening to your computing environment:
-
-- Software updates
-- Change of employer
-- Sudden need for a new computer
-
-:::
-
-::: {.column width="50%"}
-
-![](https://media1.tenor.com/m/1L7rJphSMxQAAAAC/fail-fall.gif)
-
-:::
-
-::::
 
 # Questions
 
@@ -80,7 +61,7 @@ Unpredictable things happening to your computing environment:
 ## This presentation
 
 - [Github](https://github.com/larsvilhuber/reproducibility-for-llm)
-- [Presentation](https://larsvilhuber.github.io/reproducibility-for-llm/presentation/)
+- [Presentation](https://larsvilhuber.github.io/reproducibility-for-llm/presentation/) ([PDF](presentation.pdf))
 
 
 Content is [![License: CC BY-NC 4.0](images/cc-by-nc-80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/).
