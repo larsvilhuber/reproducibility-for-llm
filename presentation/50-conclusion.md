@@ -42,6 +42,13 @@
 
 ## Solutions
 
+- Include **data** where possible
+  - licenses
+  - size
+  - intermediate data where useful/time-consuming (but: license!)
+
+## Solutions
+
 - Consider how and where to **preserve** 
   - industry repositories may be fine for **sharing**
   - academic repositories (**Zenodo**, **Dataverse**) handle **preservation**
