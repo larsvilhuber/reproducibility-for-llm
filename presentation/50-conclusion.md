@@ -59,3 +59,5 @@
 
 - Use existing **resources**
   - [Template README](https://social-science-data-editors.github.io/template_README/) ([presentation](https://larsvilhuber.github.io/readme-presentation/)) as guidance
+  - [Self-check your code](https://larsvilhuber.github.io/self-checking-reproducibility/) ([presentation](https://larsvilhuber.github.io/self-checking-reproducibility/presentation/))
+  
