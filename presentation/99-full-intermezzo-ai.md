@@ -3,107 +3,25 @@
 ## What did Claude say?
 
 [^claude1] 
-```
-A presentation_ on the reproducibility of AI-based research should comprehensively address several critical aspects: 
 
-1. Methodology Transparency
-   - Detailed documentation of data sources, preprocessing steps, and data cleaning techniques
-   - Complete description of model architecture, hyperparameters, and training procedures
-   - Explicit explanation of any data augmentation or synthetic data generation methods
-```
+```{r, results="asis"}
+# Read and display the content of the prompts
+# Break it into section chunks, and write out Markdown code for each chunk, separated by "---"
 
----
-
-```
-2. Computational Environment
-   - Specification of hardware used (GPU/CPU types, memory, computational resources)
-   - Exact software and library versions (Python, PyTorch, TensorFlow, etc.)
-   - Containerization or environment replication strategies (Docker, Conda environments)
-   - Seed values for random number generators to ensure consistent initialization
-
+# Read the file
+mylinesverb("korinek-2023/lars-prompt1.out")
 ```
 
----
+[^claude1]: Claude, queried on 2024-12-16, see `lars_query_claude.py` and `lars-prompt1.txt`
 
-```
-3. Data Considerations
-   - Comprehensive data provenance and licensing information
-   - Thorough description of dataset characteristics
-   - Potential biases or limitations in the training and validation datasets
-   - Data splitting strategies and rationale
-   - Approaches for handling missing or problematic data points
-
-```
-
----
-
-```
-4. Experimental Reproducibility
-   - Detailed experimental protocols
-   - Precise performance metrics and statistical analysis methods
-   - Multiple experimental runs to demonstrate result consistency
-   - Confidence intervals and variance measurements
-   - Ablation studies showing the impact of different model components
-
-```
-
----
-
-```
-5. Code and Implementation
-   - Full, well-documented source code
-   - Usage of version control (GitHub repositories)
-   - Clear instructions for environment setup and model reproduction
-   - Automated testing and validation scripts
-   - Open-source release of models and training scripts
-
-```
-
----
-
-```
-6. Ethical and Contextual Considerations
-   - Potential limitations of the research
-   - Ethical implications of the AI methodology
-   - Contextual constraints of the research findings
-   - Potential generalizability challenges
-```
-
----
-
-```
-
-7. Validation Strategies
-   - Cross-validation techniques
-   - Benchmarking against existing methods
-   - Independent verification by third-party researchers
-   - Comparative analysis with previous related work
-```
-
----
-
-```
-
-8. Reporting Challenges
-   - Acknowledgment of inherent variability in AI research
-   - Transparency about potential non-reproducible elements
-   - Recommendations for future researchers
-```
-
----
-
-```
-
-By comprehensively addressing these areas, the presentation can provide a robust framework for understanding and potentially replicating AI-based research, ultimately contributing to the scientific integrity and advancement of the field.
-```
 
 ## What did OpenAI say? {.smaller}
 
 [^openai1]
 
-```{r}
+```{r, results="asis"}
 # Read and display the content of the prompts
-mylines("korinek-2023/lars-prompt1.out",charlimit="99",prefix="")
+mylinesverb("korinek-2023/lars-prompt1.out")
 ```
 
 [^openai1]: OpenAI, queried on 2024-12-14, see `lars_query.py` and `lars-prompt1.txt`
@@ -113,10 +31,10 @@ mylines("korinek-2023/lars-prompt1.out",charlimit="99",prefix="")
 
 [^gemini1]
 
-```{r}
+```{r, results="asis"}
 # Read and display the content of the prompts
 gemini.version <- "20241216_101942"
-mylines(paste0("korinek-2023/lars-prompt1_gemini_",gemini.version,".out"),charlimit="99",prefix="")
+mylinesverb(paste0("korinek-2023/lars-prompt1_gemini_",gemini.version,".out"))
 ```
 
 [^gemini1]: Gemini, queried on 2024-12-15, see `lars_query_gemini.py` and `lars-prompt1.txt`
