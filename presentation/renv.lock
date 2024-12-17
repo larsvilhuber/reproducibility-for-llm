@@ -136,6 +136,11 @@
       ],
       "Hash": "e0b3a53876554bd45879e596cdb10a52"
     },
+    "here": {
+      "Package": "here",
+      "Version": "1.0.1",
+      "Source": "Repository"
+    },
     "highr": {
       "Package": "highr",
       "Version": "0.11",
@@ -286,6 +291,11 @@
         "yaml"
       ],
       "Hash": "27f9502e1cdbfa195f94e03b0f517484"
+    },
+    "rprojroot": {
+      "Package": "rprojroot",
+      "Version": "2.0.4",
+      "Source": "Repository"
     },
     "sass": {
       "Package": "sass",
