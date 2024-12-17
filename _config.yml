@@ -5,7 +5,7 @@ title: Reproducibility and LLMs
 author: Lars Vilhuber
 logo: assets/ssde-logo.jpeg
 copyright: "2024"
-exclude_patterns          : ["*venv*",".git*",".devcontainer","presentation"]
+exclude_patterns          : ["*venv*",".git*",".devcontainer","presentation",".cache"]
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -39,7 +39,7 @@ parse:
     # - html_admonition
     # - html_image
     - linkify
-    # - replacements
+    - replacements
     # - smartquotes
     - substitution
     - tasklist

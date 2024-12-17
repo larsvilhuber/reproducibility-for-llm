@@ -1,3 +1,15 @@
+---
+jupytext:
+  text_representation:
+    format_name: myst
+    extension: .md
+    format_version: '1.3'
+    jupytext_version: '1.11.2'
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
 
 # Introduction
 
@@ -15,6 +27,10 @@ The table of contents goes initially from easy to more complex. Each section sho
 ## TL;DR
 
 Techy lingo for "too long, didn't read". A summary of the most important takeaways will be at the top of each section.
+
+
+> A presentation that may be more up-to-date is available [here](https://larsvilhuber.github.io/reproducibility-for-llm/presentation/).
+
 
 ## How to contribute
 

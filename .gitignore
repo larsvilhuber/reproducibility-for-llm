@@ -16,3 +16,4 @@ index_files
 .config
 .local
 .sh_history 
+.venv-*
