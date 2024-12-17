@@ -1,5 +1,17 @@
 # Useful links
 
+```{r}
+#| label: setup
+#| echo: false
+#| results: hide
+
+
+# Load the _quarto.yml file
+config <- yaml::read_yaml(here::here("_quarto.yml"))
+
+# Access parameters from the YAML config
+
+```
 
 - {{< fa brands github size=1x >}} [GitHub](`r config$github$url`)
 - {{< fa home size=1x >}} [`r config$author$name`](`r config$author$homepage`)
