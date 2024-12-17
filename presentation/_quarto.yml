@@ -1,3 +1,10 @@
+author: 
+  name: "Lars Vilhuber"
+  homepage: "https://your-homepage.com"
+
+github:
+  url: "https://github.com/larsvilhuber/reproducibility-for-llm/"
+
 format: 
   revealjs:
     baseurl: https://larsvilhuber.github.io/reproducibility-for-llm/presentation/

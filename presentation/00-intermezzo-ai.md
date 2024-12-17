@@ -2,7 +2,7 @@
 
 ```{r}
 # Read and display the content of the prompts
-mylines("korinek-2023/lars-prompt1.txt",charlimit="99",prefix="> ")
+mylines(here::here("korinek-2023/lars-prompt1.txt"),charlimit="99",prefix="> ")
 ```
 
 ## Response

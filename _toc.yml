@@ -8,3 +8,6 @@ parts:
     chapters: 
     - file: 00-targets
     - file: 00-preliminaries
+  - caption: Metadata
+    chapters:
+    - file: 99-00-metadata
