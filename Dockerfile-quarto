@@ -1,6 +1,9 @@
 ARG ROCKERVER=verse:4.4.0
 FROM rocker/$ROCKERVER
 
-
 RUN curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb \
   && DEBIAN_FRONTEND=noninteractive apt install ./quarto-linux-amd64.deb
+
+COPY presentation/renv.lock /home/rstudio/renv.lock
+RUN R -e "install.packages('renv')"
+RUN R -e "renv::restore(lockfile = '/home/rstudio/renv.lock')"
