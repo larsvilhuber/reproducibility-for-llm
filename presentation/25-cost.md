@@ -14,6 +14,12 @@
 - 3 weeks Norway: **\$3,000**
 - 20,000 core-hours/ `x2iedn.32xlarge`: **\$4168.125**
 
+## Again...
+
+
+{{< include robot.include >}}
+
+
 ## How much does it cost...
 
 - To train your model in the cloud?

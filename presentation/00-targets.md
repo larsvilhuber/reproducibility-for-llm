@@ -1,4 +1,4 @@
-# Targets {.smaller}
+# Transparency Targets {.smaller}
 
 We want to check that
 
@@ -6,7 +6,7 @@ We want to check that
 
 - [ ]  the materials can be accessed by others within a reasonable timeframe
 - [ ]  whether the materials can be preserved is made clear
-- [ ]  the extent to which re-running the same code yields the same results
+- [ ]  the extent to which re-running the same code can/does yield the same results
 
 
 :::
@@ -20,4 +20,3 @@ In Economics,
 - Describe all data transformations starting with **raw data**
 - Provide **all code**, including for data you cannot share
 
-## But first...

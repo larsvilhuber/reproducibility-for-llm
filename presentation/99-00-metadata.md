@@ -1,7 +1,7 @@
 # Useful links
 
 ```{r}
-#| label: setup
+#| label: metadata
 #| echo: false
 #| results: hide
 
@@ -20,7 +20,7 @@ config <- yaml::read_yaml(here::here("_quarto.yml"))
 ```{r}
 #| echo: false
 #| out.width: "100px"
-qr_file <- "images/.png"
+qr_file <- "images/qr.png"
 knitr::include_graphics(qr_file)
 ```
 

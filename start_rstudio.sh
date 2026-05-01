@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+PWD=$(pwd)
+. ${PWD}/.myconfig.sh
+
 if [[ "$1" == "-h" ]]
 then
 cat << EOF
@@ -10,9 +14,20 @@ EOF
 exit 0
 fi
 
-PWD=$(pwd)
-. ${PWD}/.myconfig.sh
-tag=${1:-$tag}
+if [[ ! -z "$1" ]]
+then
+  tag=${1}
+fi
+shift
+
+if [[ ! -z "$1" ]]
+then
+  echo "Passing additional arguments to docker run: $@"
+  DOCKEREXTRA="$DOCKEREXTRA -it"
+fi
+
+echo "Using tag = $tag"
+
 case $USER in
   codespace)
   WORKSPACE=/workspaces
@@ -23,8 +38,29 @@ case $USER in
 esac
   
 # pull the docker if necessary
+set -v
 
-docker pull $dockerrepo:$tag
+echo $space/$repo
+tag_present=$(docker images | grep $space/$repo | awk ' { print $2 } ' | grep $tag)
 
+if [[ -z "$tag_present" ]]
+then
+  echo "Pulling $space/$repo:$tag"
+  docker pull $space/$repo:$tag
+else  
+  echo "Found $space/$repo:$tag"
+fi
 
-docker run -e DISABLE_AUTH=true -v "$WORKSPACE":/home/rstudio --rm -p 8787:8787 $dockerrepo:$tag
+# map cache if present
+
+if [[ -d $WORKSPACE/.cache ]]
+then
+  echo "Found cache"
+  # Ensure cache directory is writable
+  chmod a+rwX $WORKSPACE/.cache
+  DOCKEREXTRA="$DOCKEREXTRA -v $WORKSPACE/.cache:/home/rstudio/.cache"
+fi
+
+docker run $DOCKEREXTRA -e DISABLE_AUTH=true \
+  --name rstudio \
+  -e RENV_PATHS_CACHE=/home/rstudio/.cache -v "$WORKSPACE":/home/rstudio/project -w /home/rstudio/project --rm -p 8787:8787  -p 3456:3456 $space/$repo:$tag $@

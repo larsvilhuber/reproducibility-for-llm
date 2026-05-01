@@ -3,7 +3,11 @@
 
 AI introduces **massive challenges for reproducibility**.
 
-# Counterpoint
+## Thesis
+
+{{< include robot.include >}}
+
+## Counterpoint
 
 Not unlike **difficulties** researchers face with
 
@@ -11,15 +15,8 @@ Not unlike **difficulties** researchers face with
 - existing commercial software
 - external APIs of any kind
 
----
 
-I will discuss 
-
-- algorithmic transparency
-- data dependencies
-- archiving machine learning models
-
-## Computational reproducibility
+# Computational reproducibility
 
 In this talk, we focus on **computational reproducibility**, though the ultimate goal remains *replicability*. 
 

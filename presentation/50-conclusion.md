@@ -8,11 +8,6 @@
 
 ... compared to the **average** difficulty in economics papers
 
-## Solutions
-
-- Be **reproducible** from the start
-  - Use **environments**
-  - Use **logging** as evidence, especially when **repetitions** are expensive
 
 ## Solutions
 
@@ -39,13 +34,18 @@
   - fix random seeds, where possible
   - **hyperparameters**, *temperature*, or whatever it is called
   - *prompts* could be considered **metadata**
+- *Understand and explain* when some parameters cannot be controlled.
 
 ## Solutions
 
 - Include **data** where possible
   - licenses
   - size
-  - intermediate data where useful/time-consuming (but: license!)
+  - intermediate data where useful/time-consuming 
+  
+but: 
+  - licenses!
+  - privacy!
 
 ## Solutions
 

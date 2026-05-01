@@ -3,7 +3,9 @@ title: "Reproducibility in an AI World"
 author: 
   - "Lars Vilhuber"
 date: May 1 2026
-bibliography: "paper.bib"
+bibliography: 
+  - references.bib
+  - paper.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +18,7 @@ message(Sys.getenv("GITHUB_REPOSITORY"))
 # - split the two components
 # - combine them into a URL with 'github.io' in the middle
 
-SUBDIRECTORY <- "" # Leave this empty if this file is in the main directory of the repository
+SUBDIRECTORY <- "short.html" # Leave this empty if this file is in the main directory of the repository
 
 GITHUB_REPOSITORY <- Sys.getenv("GITHUB_REPOSITORY")
 GITHUB_REPOSITORY_PARTS <- strsplit(GITHUB_REPOSITORY, "/")[[1]]
@@ -25,41 +27,36 @@ REPOSITORY_URL <- paste0("https://github.com/", GITHUB_REPOSITORY)
 WEBSITE_URL <- paste0("https://", GITHUB_REPOSITORY_PARTS[1], ".github.io/", GITHUB_REPOSITORY_PARTS[2], "/", SUBDIRECTORY)
 WEBSITE_SHORT <- paste0(GITHUB_REPOSITORY_PARTS[1], ".github.io/", GITHUB_REPOSITORY_PARTS[2], "/", SUBDIRECTORY)
 
+# generate the PDF URL by replacing the .html suffix with .pdf
+PDF_URL <- sub("\\.html$", ".pdf", WEBSITE_URL)
+
 ```
 
-{{< include 00-preamble.md >}}
+```{r, child=c('00-preamble.md')}
+```
 
-{{< include 00-follow-along.md >}}
+```{r, child=c('00-follow-along.md')}
+```
 
-{{< include 00-index-mod.md >}}
+{{< include 00-whoami.md >}}
+
+
+{{< include 00-intro-short.md >}}
+
+{{< include 01-problem.md >}}
 
 {{< include 00-targets.md >}}
 
-## But first...
+# "Our project involves 60,000 PDFs ... categorize using LLMs.  "
 
 {{< include 10-data-provenance.md >}}
 
-{{< include 20-software.md >}}
+{{< include 21-software-short.md >}}
 
-{{< include 31-run_it_again.md >}}
+{{< include 32-run_it_again-short.md >}}
 
-{{< include 32-00-intermezzo.md >}}
 
-{{< include 32-hands_off_running.md >}}
-
-{{< include 33-an-example.md >}}
-
-{{< include 34-00-intermezzo.md >}}
-
-{{< include 34-creating_log_files.md >}}
-
-{{< include 35-00-intermezzo.md >}}
-
-{{< include 35-environments-python.md >}}
-
-{{< include 25-cost.md >}}
-
-{{< include 26-metadata.md >}}
+{{< include 27-cost-short.md >}}
 
 {{< include 50-conclusion.md >}}
 

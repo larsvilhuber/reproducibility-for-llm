@@ -1,8 +1,5 @@
-# Computing Requirements
+# Computational Reproducibility
 
-## Guidance in README
-
-[![](images/readme-computational.png)](https://social-science-data-editors.github.io/template_README/template-README.html#computational-requirements)
 
 ## Computational Environment
 
@@ -11,12 +8,6 @@ Describe what **YOU** used
 - relevant hardware, own and rented (CPU/GPU, memory, storage)
 - necessary software, including library versions (Python, R, whatever)
 
-## Computational Environment
-
-BUT:
-
-- do not list what your computer has installed - list what you **used for this project**
-- (`pip freeze` without an environment will be too much!)
 
 ## Computational Environment
 
@@ -27,14 +18,10 @@ Describe what **the REPLICATOR** needs to have or install
 
 ## None of this is AI specific!
 
-
-{{< include robot.include >}}
-
-
 ## LLM-specific considerations
 
 - But LLMs may have some stricter-than-usual operating conditions
-- Most economists don't need **dual Nvidia RTX 3090** for their computing...
+- Most economists don't need **dual Nvidia H100** for their computing...
 
 > Be as specific as necessary, but no more!
 
@@ -88,3 +75,11 @@ Reminder
 - Example: [`Llama-3`](https://huggingface.co/meta-llama/Llama-3.2-1B)
 - But: no DOI. Could be withdrawn?
 
+## LLM-specific considerations
+
+- Document what `software`  you are running (API, model name, version)
+- Document what `hardware` you are running on 
+  - local: CPU/GPU, memory, storage
+  - rented: cloud provider, instance type, etc.
+- API is just a **rented** hardware environment
+- Cost... 
