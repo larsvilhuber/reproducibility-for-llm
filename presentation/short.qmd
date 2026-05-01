@@ -77,9 +77,6 @@ PDF_URL <- sub("\\.html$", ".pdf", WEBSITE_URL)
 
 {{< include 99-00-metadata.md >}}
 
-# Appendix
-
-{{< include 99-full-intermezzo-ai.md >}}
 
 
 # References
