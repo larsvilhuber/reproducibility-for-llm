@@ -1,13 +1,9 @@
 author: 
   name: "Lars Vilhuber"
-  homepage: "https://your-homepage.com"
+  homepage: "https://lars.vilhuber.com"
 
-github:
-  url: "https://github.com/larsvilhuber/reproducibility-for-llm/"
-
-format: 
+format:
   revealjs:
-    baseurl: https://larsvilhuber.github.io/reproducibility-for-llm/presentation/
     scrollable: true
     margin: 0
     code-overflow: wrap
@@ -16,12 +12,9 @@ format:
     center: true
     transition: slide
     theme: [night, style.css]
-    self_contained: false
-    reveal_options:
-        slideNumber: true
-        previewLinks: false
-        chalkboard:
-          theme: chalkboard
-          toggleNotesButton: true
-    reveal_plugins: ["chalkboard"]
+    embed-resources: false
+    slide-number: true
+    preview-links: false
+    chalkboard:
+      theme: chalkboard
 

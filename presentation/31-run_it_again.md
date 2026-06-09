@@ -47,3 +47,82 @@ Furthermore, it may suggest that you **haven't been able to re-run** your own co
 - [ ] it will run on somebody else's computer
 
 :::
+
+# LLM specificity of runtime variability
+
+## Inherent variability
+
+- LLMs are **probabilistic** by design, so some variability is expected
+- "Temperature"  is meant to control this, but imperfect
+
+> Is your result robust?
+
+## LLM output as a Multiple Imputation problem 
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- [@rubin1993] is credited with one of the first formalizations of multiple imputation
+- Often used for privacy protection, but also missing data
+- See [@reiter2004,@ReiterJ.Stat.Plan.Inference2005] for inference rules
+:::
+::: {.column width="50%"}
+![](images/rubin1993.png)
+:::
+::::
+
+## LLM output as a Multiple Imputation problem {auto-animate=true transition=fade .smaller}
+
+
+**Recommendation**
+
+:::: {.columns}
+::: {.column width="50%"}
+- Run the LLM (query) multiple times (e.g., 10 times) -> $D^*_m, m=1,...,10$
+:::
+::: {.column width="50%"}
+
+
+:::
+::::
+
+## LLM output as a Multiple Imputation problem {auto-animate=true transition=fade .smaller}
+
+
+**Recommendation**
+
+:::: {.columns}
+::: {.column width="50%"}
+- Run the downstream analysis for each $D^*_m$ -> ${q}_m, v_m, m=1,...,10$
+:::
+::: {.column width="50%"}
+
+
+:::
+::::
+
+
+## LLM output as a Multiple Imputation problem {auto-animate=true transition=fade .smaller}
+
+
+**Recommendation**
+
+:::: {.columns}
+::: {.column width="50%"}
+- Use multiple imputation rules (Rubin, Reiter, etc.) to report
+  - sampling variability inherent in the underlying data $D^*$: $\bar{v}$
+  - variability due to the variability in the LLM output $b$
+:::
+::: {.column width="50%"}
+
+![](images/reiter2004-formula.png)
+
+:::
+::::
+
+## LLM-specific considerations
+
+- Be precise about all the parameters
+- Also store outputs from API (but: privacy concerns are real!)
+- Document the variability in the output (e.g., by running multiple times)

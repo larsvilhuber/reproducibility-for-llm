@@ -11,9 +11,16 @@ config <- yaml::read_yaml(here::here("_quarto.yml"))
 
 # Access parameters from the YAML config
 
+# Derive the GitHub repository URL from the GITHUB_REPOSITORY environment
+# variable (set automatically by GitHub Actions as "owner/repo"). This keeps
+# the link portable across forks/repositories.
+
+GITHUB_REPOSITORY <- Sys.getenv("GITHUB_REPOSITORY")
+REPOSITORY_URL <- paste0("https://github.com/", GITHUB_REPOSITORY)
+
 ```
 
-- {{< fa brands github size=1x >}} [GitHub](`r config$github$url`)
+- {{< fa brands github size=1x >}} [GitHub](`r REPOSITORY_URL`)
 - {{< fa home size=1x >}} [`r config$author$name`](`r config$author$homepage`)
 - Presentation QR Code:
 

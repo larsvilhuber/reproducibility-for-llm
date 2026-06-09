@@ -3,7 +3,9 @@ title: "Reproducibility in an AI World"
 author: 
   - "Lars Vilhuber"
 date: May 1 2026
-bibliography: "paper.bib"
+bibliography: 
+  - references.bib
+  - paper.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -31,11 +33,18 @@ WEBSITE_SHORT <- paste0(GITHUB_REPOSITORY_PARTS[1], ".github.io/", GITHUB_REPOSI
 
 {{< include 00-follow-along.md >}}
 
-{{< include 00-index-mod.md >}}
+
+{{< include 00-whoami.md >}}
+
+{{< include 00-intro-short.md >}}
+
+
+{{< include 01-problem.md >}}
 
 {{< include 00-targets.md >}}
 
-## But first...
+
+# "Our project involves 60,000 PDFs ... categorize using LLMs"
 
 {{< include 10-data-provenance.md >}}
 

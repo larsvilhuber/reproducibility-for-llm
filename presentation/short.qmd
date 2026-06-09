@@ -47,7 +47,7 @@ PDF_URL <- sub("\\.html$", ".pdf", WEBSITE_URL)
 
 {{< include 00-targets.md >}}
 
-# "Our project involves 60,000 PDFs ... categorize using LLMs.  "
+# "Our project involves 60,000 PDFs ... categorize using LLMs"
 
 {{< include 10-data-provenance.md >}}
 

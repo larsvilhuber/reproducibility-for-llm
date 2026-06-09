@@ -7,7 +7,7 @@
 - Consumers combine data and code, **re-run it**, and validate the analysis
 
 
-## Computational Reproducibility in the Social Sciences {.smaller}
+## Computational Reproducibility in the Social Sciences {.smaller transition="fade"}
 
 **But what makes this hard in practice?**
 
@@ -24,7 +24,7 @@
 :::
 ::::
 
-## Computational Reproducibility in the Social Sciences {.smaller}
+## Computational Reproducibility in the Social Sciences {.smaller transition="fade"}
 
 **But what makes this hard in practice?**
 
@@ -42,7 +42,7 @@
 :::
 ::::
 
-## Computational Reproducibility in the Social Sciences {.smaller}
+## Computational Reproducibility in the Social Sciences {.smaller transition="fade"}
 
 **But what makes this hard in practice?**
 
