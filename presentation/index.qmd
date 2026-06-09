@@ -27,6 +27,10 @@ REPOSITORY_URL <- paste0("https://github.com/", GITHUB_REPOSITORY)
 WEBSITE_URL <- paste0("https://", GITHUB_REPOSITORY_PARTS[1], ".github.io/", GITHUB_REPOSITORY_PARTS[2], "/", SUBDIRECTORY)
 WEBSITE_SHORT <- paste0(GITHUB_REPOSITORY_PARTS[1], ".github.io/", GITHUB_REPOSITORY_PARTS[2], "/", SUBDIRECTORY)
 
+# The PDF filename/location is set by the GitHub Action (.github/workflows/main.yml),
+# which renames index.pdf to presentation.pdf next to the deployed slides.
+PDF_URL <- "presentation.pdf"
+
 ```
 
 {{< include 00-preamble.md >}}
